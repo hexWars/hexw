@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Column from "@/components/Column.astro";
+import { Navigation } from "@/components/NavigationMenu";
 ---
 
 <!doctype html>
@@ -17,12 +19,25 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="flex">
-			<div class="w-1/4"></div>
-			<div class="w-1/2 justify-center">
-				<slot />
+		<div class="flex-col h-screen">
+			<div
+				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm border-4 border-green-300"
+			>
+				<Navigation />
 			</div>
-			<div class="w-1/4"></div>
+			<div class="flex h-dvh flex-1 rounded-sm border-4 border-green-300">
+				<div class="w-1/4 rounded-sm border-4 border-sky-300">
+					<Column />
+				</div>
+				<div
+					class="w-1/2 justify-center flex-col rounded-sm border-4 border-green-900"
+				>
+					<div class="h-1/4"></div>
+					<slot />
+					<div class="h-1/4"></div>
+				</div>
+				<div class="w-1/4"></div>
+			</div>
 		</div>
 	</body>
 </html>
