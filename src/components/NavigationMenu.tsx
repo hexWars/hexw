@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -16,20 +17,32 @@ export function Navigation() {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>article</NavigationMenuTrigger>
-                    <NavigationMenuContent>asdfasdfasd</NavigationMenuContent>
+                    <a href="/">
+                        <NavigationMenuLink>
+                            index
+                        </NavigationMenuLink>
+                    </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
-                    <NavigationMenuContent>gr</NavigationMenuContent>
+                    <a href="/article">
+                        <NavigationMenuLink>
+                            article
+                        </NavigationMenuLink>
+                    </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Tags</NavigationMenuTrigger>
-                    <NavigationMenuContent>qewr</NavigationMenuContent>
+                    <a href="/tag">
+                        <NavigationMenuLink>
+                            tag
+                        </NavigationMenuLink>
+                    </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Friends</NavigationMenuTrigger>
-                    <NavigationMenuContent>ngfd</NavigationMenuContent>
+                    <a href="/about">
+                        <NavigationMenuLink>
+                            about
+                        </NavigationMenuLink>
+                    </a>
                 </NavigationMenuItem>
 
 

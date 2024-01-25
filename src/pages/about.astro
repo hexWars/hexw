@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+
+const pageTitle = "关于我";
+const identity = {
+    firstName: "莎拉",
+    country: "加拿大",
+    occupation: "技术撰稿人",
+    hobbies: ["摄影", "观鸟", "棒球"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+---
+
+<Layout title="Welcome to Astro.">
+    about
+    <h1>{pageTitle}</h1>
+    <h2>……和我的新 Astro 网站！</h2>
+
+    <p>以下是关于我的几个事实：</p>
+    <ul>
+        <li>我的名字是{identity.firstName}.</li>
+        <li>我住在{identity.country}。我的职业是{identity.occupation}。</li>
+        {
+            identity.hobbies.length >= 2 && (
+                <li>
+                    我的两个习惯：{identity.hobbies[0]}和{identity.hobbies[1]}
+                </li>
+            )
+        }
+    </ul>
+    <p>我的技能是：</p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+</Layout>
