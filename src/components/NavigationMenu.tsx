@@ -16,11 +16,23 @@ export function Navigation() {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                        <NavigationMenuLink>Link</NavigationMenuLink>
-                    </NavigationMenuContent>
+                    <NavigationMenuTrigger>article</NavigationMenuTrigger>
+                    <NavigationMenuContent>asdfasdfasd</NavigationMenuContent>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
+                    <NavigationMenuContent>gr</NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Tags</NavigationMenuTrigger>
+                    <NavigationMenuContent>qewr</NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Friends</NavigationMenuTrigger>
+                    <NavigationMenuContent>ngfd</NavigationMenuContent>
+                </NavigationMenuItem>
+
+
             </NavigationMenuList>
         </NavigationMenu>
     );

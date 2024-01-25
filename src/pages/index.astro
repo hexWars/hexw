@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
+const title = "self title"
+const description = "self description"
+const content = "Content"
 import {
 	Card,
 	CardContent,
@@ -12,13 +15,13 @@ import {
 ---
 
 <Layout title="Welcome to Astro.">
-	<Card className="bg-sky-200">
+	<Card className="mt-20 px-24 py-20 h-2/3">
 		<CardHeader>
-			<CardTitle className="bg-blue-400">Card Title</CardTitle>
-			<CardDescription>Card Description</CardDescription>
+			<CardTitle className="">{title}</CardTitle>
+			<CardDescription>{description}</CardDescription>
 		</CardHeader>
 		<CardContent>
-			<p>Card Content</p>
+			<p>{content}</p>
 		</CardContent>
 		<CardFooter>
 			<p>Social Icon</p>
