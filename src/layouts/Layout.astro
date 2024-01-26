@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Column from "@/components/Column.astro";
+import Footer from "../components/Footer.astro";
 import { Navigation } from "@/components/NavigationMenu";
 ---
 
@@ -23,10 +24,9 @@ import { Navigation } from "@/components/NavigationMenu";
 			<div
 				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm border-4 border-sky-400"
 			>
-				<Navigation client:idle/>
+				<Navigation client:idle />
 			</div>
 			<div class="flex h-screen rounded-sm border-4 border-green-300">
-				
 				<div class="w-1/4">
 					<Column />
 				</div>
@@ -34,6 +34,11 @@ import { Navigation } from "@/components/NavigationMenu";
 					<slot />
 				</div>
 				<div class="w-1/4"></div>
+			</div>
+			<div
+				class="py-1 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm border-4 border-sky-400 "
+			>
+				<Footer />
 			</div>
 		</div>
 	</body>

@@ -31,7 +31,7 @@ export function Navigation() {
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/tag">
+                    <a href="/tags">
                         <NavigationMenuLink>
                             tag
                         </NavigationMenuLink>
