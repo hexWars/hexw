@@ -18,30 +18,22 @@ export function Navigation() {
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <a href="/">
-                        <NavigationMenuLink>
-                            index
-                        </NavigationMenuLink>
+                        index
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <a href="/article/">
-                        <NavigationMenuLink>
-                            article
-                        </NavigationMenuLink>
+                        article
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <a href="/tags/">
-                        <NavigationMenuLink>
-                            tag
-                        </NavigationMenuLink>
+                        tag
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <a href="/about/">
-                        <NavigationMenuLink>
-                            about
-                        </NavigationMenuLink>
+                        about
                     </a>
                 </NavigationMenuItem>
 
