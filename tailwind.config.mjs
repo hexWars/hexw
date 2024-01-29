@@ -19,7 +19,12 @@ export default {
     },
     extend: {
       colors: {
-        'dark-purple': '#b1a4e5',
+        // https://github.com/enkia/tokyo-night-vscode-theme
+        'dark-purple-text': '#b1a4e5',
+        'dark-purple-bg': 'rgb(31, 41, 55)',
+        'dark-purple-bg2': '#0d1117',
+        'dark-purple-code': '#d2a8ff',
+        'dark-blue-code': '#a5d6ff',
         'r1': '#272343',
         'light-purple': '#453097',
         'light-green': 'rgb(0 122 122)',

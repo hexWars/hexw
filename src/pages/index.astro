@@ -18,15 +18,19 @@ import Social from "@/components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Card className="mt-20 px-24 py-20 h-2/3 bg-gray-50">
+	<Card
+		className="mt-20 px-24 py-20 h-2/3 bg-dark-purple-bg border-2 border-light-purple"
+	>
 		<CardHeader>
-			<CardTitle className="">{title}</CardTitle>
-			<CardDescription>{description}</CardDescription>
+			<CardTitle className="text-dark-purple-text">{title}</CardTitle>
+			<CardDescription className="text-dark-purple-text">
+				{description}
+			</CardDescription>
 		</CardHeader>
-		<CardContent>
+		<CardContent className="text-dark-purple-text">
 			<p>{content}</p>
 		</CardContent>
-		<CardFooter>
+		<CardFooter className="text-dark-purple-text">
 			<Social />
 		</CardFooter>
 	</Card>
