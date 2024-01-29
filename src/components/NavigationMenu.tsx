@@ -14,7 +14,7 @@ import {
 
 export function Navigation() {
     return (
-        <NavigationMenu className='text-light-green'>
+        <NavigationMenu className='text-indigo-400'>
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <a href="/">
