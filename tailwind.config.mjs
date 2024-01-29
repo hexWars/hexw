@@ -19,6 +19,10 @@ export default {
     },
     extend: {
       colors: {
+        'dark-purple': '#b1a4e5',
+        'r1': '#272343',
+        'light-purple': '#453097',
+        'light-green': 'rgb(0 122 122)',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
-const title = "self title"
-const description = "self description"
-const content = "Content"
+const title = "self title";
+const description = "self description";
+const content = "Content";
 import {
 	Card,
 	CardContent,
@@ -12,10 +12,13 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import Social from "@/components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Card className="mt-20 px-24 py-20 h-2/3">
+	<Card className="mt-20 px-24 py-20 h-2/3 bg-gray-50">
 		<CardHeader>
 			<CardTitle className="">{title}</CardTitle>
 			<CardDescription>{description}</CardDescription>
@@ -24,7 +27,7 @@ import {
 			<p>{content}</p>
 		</CardContent>
 		<CardFooter>
-			<p>Social Icon</p>
+			<Social />
 		</CardFooter>
 	</Card>
 </Layout>

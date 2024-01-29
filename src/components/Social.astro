@@ -1,5 +1,16 @@
 ---
+import { Github, Send, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const { platform, username } = Astro.props;
 ---
+<!-- https://lucide.dev/ -->
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<Button variant="ghost" size="icon">
+    <a href="https://github.com/hexWars"><Github className="h-4 w-4" /></a>
+</Button>
+<Button variant="ghost" size="icon">
+    <a href="/login"><Send className="h-4 w-4" /></a>
+</Button>
+<Button variant="ghost" size="icon">
+    <a href="mailto:tech@sehnsucht.top"><Mail className="h-4 w-4" /></a>
+</Button>

@@ -14,7 +14,7 @@ import {
 
 export function Navigation() {
     return (
-        <NavigationMenu>
+        <NavigationMenu className='text-light-green'>
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <a href="/">
@@ -24,21 +24,21 @@ export function Navigation() {
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/article">
+                    <a href="/article/">
                         <NavigationMenuLink>
                             article
                         </NavigationMenuLink>
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/tags">
+                    <a href="/tags/">
                         <NavigationMenuLink>
                             tag
                         </NavigationMenuLink>
                     </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/about">
+                    <a href="/about/">
                         <NavigationMenuLink>
                             about
                         </NavigationMenuLink>
