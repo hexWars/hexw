@@ -22,13 +22,13 @@ import { Navigation } from "@/components/NavigationMenu";
 	<body>
 		<div class="flex flex-col h-screen bg-dark-purple-bg">
 			<div
-				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm border-4 border-sky-400"
+				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 opacity-50 bg-dark-purple-nav"
 			>
 				<Navigation client:idle />
 			</div>
-			<div class="flex h-screen rounded-sm border-4 border-green-300">
+			<div class="flex h-screen rounded-sm">
 				<div class="w-1/4">
-					<Column />
+					<!-- <Column /> -->
 				</div>
 				<div class="w-1/2 justify-center flex-col">
 					<slot />
@@ -36,7 +36,7 @@ import { Navigation } from "@/components/NavigationMenu";
 				<div class="w-1/4"></div>
 			</div>
 			<div
-				class="py-1 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm border-4 border-sky-400"
+				class="py-1 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm"
 			>
 				<Footer />
 			</div>

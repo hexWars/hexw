@@ -1,16 +1,21 @@
 ---
-import { Github, Send, Mail } from "lucide-react";
+import { Github, Send, Mail, Rss } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const { platform, username } = Astro.props;
 ---
-<!-- https://lucide.dev/ -->
 
-<Button variant="ghost" size="icon">
-    <a href="https://github.com/hexWars"><Github className="h-4 w-4" /></a>
-</Button>
-<Button variant="ghost" size="icon">
-    <a href="/login"><Send className="h-4 w-4" /></a>
-</Button>
-<Button variant="ghost" size="icon">
-    <a href="mailto:tech@sehnsucht.top"><Mail className="h-4 w-4" /></a>
-</Button>
+<!-- https://lucide.dev/ -->
+<div>
+    <Button variant="secondary" size="icon" className="bg-dark-icon1">
+        <a href="https://github.com/hexWars"><Github className="h-4 w-4" /></a>
+    </Button>
+    <Button variant="secondary" size="icon" className="bg-dark-icon2">
+        <a href="/login"><Send className="h-4 w-4" /></a>
+    </Button>
+    <Button variant="secondary" size="icon" className="bg-dark-icon3">
+        <a href="mailto:tech@sehnsucht.top"><Mail className="h-4 w-4" /></a>
+    </Button>
+    <Button variant="secondary" size="icon" className="bg-dark-icon4">
+        <a href="mailto:tech@sehnsucht.top"><Rss className="h-4 w-4" /></a>
+    </Button>
+</div>

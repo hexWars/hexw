@@ -19,9 +19,9 @@ import Social from "@/components/Social.astro";
 
 <Layout title="Welcome to Astro.">
 	<Card
-		className="mt-20 px-24 py-20 h-2/3 shadow-2xl bg-dark-purple-bg border-2 border-dark-purple-bg hover:border-dark-purple-title"
+		className="mt-20 px-24 py-20 h-2/3 shadow-2xl rounded-2xl bg-gradient-to-r from-dark-purple-bg to-dark-purple-bg2 border-2 border-dark-purple-bg-border hover:border-dark-purple-bg-border2"
 	>
-		<CardHeader>
+		<CardHeader className="">
 			<CardTitle className="text-dark-purple-title">{title}</CardTitle>
 			<CardDescription className="text-dark-purple-text">
 				{description}

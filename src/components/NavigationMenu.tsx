@@ -9,32 +9,41 @@ import {
     NavigationMenuTrigger,
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import { Button } from "@/components/ui/button";
 
 
 
 export function Navigation() {
     return (
-        <NavigationMenu className='text-indigo-400'>
+        <NavigationMenu className='text-dark-purple-text-nav font-mono'>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <a href="/">
-                        index
-                    </a>
+                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
+                        <a href="/" >
+                            index
+                        </a>
+                    </Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/article/">
-                        article
-                    </a>
+                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
+                        <a href="/article/">
+                            article
+                        </a>
+                    </Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/tags/">
-                        tag
-                    </a>
+                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
+                        <a href="/tags/">
+                            tag
+                        </a>
+                    </Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <a href="/about/">
-                        about
-                    </a>
+                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
+                        <a href="/about/">
+                            about
+                        </a>
+                    </Button>
                 </NavigationMenuItem>
 
 
