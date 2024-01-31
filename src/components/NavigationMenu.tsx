@@ -10,6 +10,8 @@ import {
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ModeToggle";
+
 
 
 
@@ -45,7 +47,9 @@ export function Navigation() {
                         </a>
                     </Button>
                 </NavigationMenuItem>
-
+                <NavigationMenuItem>
+                    <ModeToggle />
+                </NavigationMenuItem>
 
             </NavigationMenuList>
         </NavigationMenu>
