@@ -17,8 +17,15 @@ import { ModeToggle } from "@/components/ModeToggle";
 
 export function Navigation() {
     return (
-        <NavigationMenu className='text-dark-purple-text-nav font-mono'>
-            <NavigationMenuList>
+        <NavigationMenu className='place-self-center'>
+            <NavigationMenuList className='flex justify-between'>
+                <NavigationMenuItem>
+                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
+                        <a href="/" >
+                            HEXW
+                        </a>
+                    </Button>
+                </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
                         <a href="/" >
