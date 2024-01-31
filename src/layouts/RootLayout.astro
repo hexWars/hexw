@@ -7,6 +7,7 @@ const { title } = Astro.props;
 import Column from "@/components/Column.astro";
 import Footer from "../components/Footer.astro";
 import { Navigation } from "@/components/NavigationMenu";
+import "@/styles/globals.css";
 ---
 
 <!doctype html>
@@ -20,7 +21,7 @@ import { Navigation } from "@/components/NavigationMenu";
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="flex flex-col h-screen bg-dark-purple-bg">
+		<div class="flex flex-col h-screen bg-theme-bg">
 			<div
 				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 opacity-50 bg-dark-purple-nav"
 			>

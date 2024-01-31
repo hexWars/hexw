@@ -1,6 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "@/styles/globals.css";
+import Layout from "../layouts/RootLayout.astro";
 const title = "self title";
 const description = "self description";
 const content = "Content";
@@ -18,8 +17,10 @@ import Social from "@/components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+	<!-- <Card className="mt-20 px-24 py-20 h-2/3 shadow-2xl rounded-2xl bg-gradient-to-r from-dark-purple-bg to-dark-purple-bg2 border-2 border-dark-purple-bg-border hover:border-dark-purple-bg-border2" > -->
+
 	<Card
-		className="mt-20 px-24 py-20 h-2/3 shadow-2xl rounded-2xl bg-gradient-to-r from-dark-purple-bg to-dark-purple-bg2 border-2 border-dark-purple-bg-border hover:border-dark-purple-bg-border2"
+		className="mt-20 px-24 py-20 h-2/3 shadow-2xl rounded-2xl transition ease-in-out delay-0 bg-dark-purple-bg hover:-translate-y-1 hover:scale-105 hover:bg-dark-purple-bg2 duration-300 order-2 border-dark-purple-bg-border hover:border-dark-purple-bg-border2"
 	>
 		<CardHeader className="">
 			<CardTitle className="text-dark-purple-title">{title}</CardTitle>
