@@ -22,16 +22,15 @@ import "@/styles/globals.css";
 	</head>
 	<body>
 		<div class="flex flex-col h-screen bg-theme-bg">
-			<div
-				class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 opacity-50 bg-dark-purple-nav "
-			>
+			<div class="py-3 px-3 mx-auto w-full max-w-6xl opacity-50
+				md:px-4">
 				<Navigation client:idle />
 			</div>
-			<div class="flex h-screen rounded-sm">
+			<div class="flex h-screen">
 				<div class="w-1/4">
 					<!-- <Column /> -->
 				</div>
-				<div class="w-1/2 justify-center flex-col">
+				<div class="w-1/2">
 					<slot />
 				</div>
 				<div class="w-1/4"></div>
