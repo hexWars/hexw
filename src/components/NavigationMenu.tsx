@@ -17,40 +17,31 @@ import { ModeToggle } from "@/components/ModeToggle";
 
 export function Navigation() {
     return (
-        <NavigationMenu className='place-self-center'>
-            <NavigationMenuList className='flex justify-between'>
-                <NavigationMenuItem>
-                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
-                        <a href="/" >
-                            HEXW
-                        </a>
-                    </Button>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
-                        <a href="/" >
-                            index
-                        </a>
-                    </Button>
-                </NavigationMenuItem>
+        <NavigationMenu className='bg-opacity-50'>
+            <a href="/" className='font-bold italic'> HEXW</a>
+            {/* FIXME: delete */}
+            <p className='w-96'></p>
+            <p className='w-96'></p>
+            <p className='w-96'></p>
+            <NavigationMenuList className=''>
                 <NavigationMenuItem>
                     <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
                         <a href="/article/">
-                            article
+                            POST
                         </a>
                     </Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
                         <a href="/tags/">
-                            tag
+                            TAG
                         </a>
                     </Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
                         <a href="/about/">
-                            about
+                            ABOUT
                         </a>
                     </Button>
                 </NavigationMenuItem>

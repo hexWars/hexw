@@ -3,7 +3,7 @@ import Layout from "../layouts/RootLayout.astro";
 const title = "Sehnsucht";
 const description = "一个空的博客";
 const content =
-	"欢迎来到我的ASDF，这是基于TailwindCSS,Shadcn和React的Astro主题，请大家提出珍贵意见，在下一定不接受";
+	"这是基于TailwindCSS,Shadcn和React的Astro主题，甘道夫打的过几万块的首付款拉丝豆腐，fow二级哦威尔基疯狂的世界里，未来日记微积分酸辣粉";
 import {
 	Card,
 	CardContent,
@@ -16,14 +16,16 @@ import Social from "@/components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Card className="my-20 px-24 py-20 h-2/3 rounded-2xl border-0 bg-background">
+	<Card
+		className="my-20 px-10 py-20 h-2/3 rounded-2xl border-0 bg-background"
+	>
 		<CardHeader className="">
-			<CardTitle className="text-theme-text text-2xl">{title}</CardTitle>
-			<CardDescription className="text-theme-link text-xs">
+			<CardTitle className="text-theme-text text-5xl">{title}</CardTitle>
+			<CardDescription className="text-theme-link text-sm">
 				{description}
 			</CardDescription>
 		</CardHeader>
-		<CardContent className="text-theme-quote text-sm h-20 mt-3">
+		<CardContent className="text-theme-quote text-base h-24 mt-3">
 			<p>{content}</p>
 		</CardContent>
 		<CardFooter className="text-theme-quote">
