@@ -22,14 +22,19 @@ import "@/styles/globals.css";
 	</head>
 	<body>
 		<div class="flex flex-col h-screen bg-theme-bg">
-			<div class="py-3 px-96 absolute max-h-16 w-full shadow-sm">
+			<div
+				class="py-3 px-96 absolute max-h-16 w-full shadow-sm flex justify-between"
+			>
+				<a href="/" class="font-bold flex flex-col justify-center">
+					HEXW</a
+				>
 				<Navigation client:idle />
 			</div>
 			<div class="flex h-screen mt-16">
 				<div class="w-1/4">
 					<!-- <Column /> -->
 				</div>
-				<div class="w-1/2">
+				<div class="w-1/2 flex flex-col items-center justify-center">
 					<slot />
 				</div>
 				<div class="w-1/4"></div>

@@ -17,12 +17,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 
 export function Navigation() {
     return (
-        <NavigationMenu className='bg-opacity-50'>
-            <a href="/" className='font-bold italic'> HEXW</a>
-            {/* FIXME: delete */}
-            <p className='w-96'></p>
-            <p className='w-96'></p>
-            <p className='w-96'></p>
+        <NavigationMenu className='bg-opacity-50 w-1/2'>
             <NavigationMenuList className=''>
                 <NavigationMenuItem>
                     <Button variant="ghost" className='text-base subpixel-antialiased font-medium'>
