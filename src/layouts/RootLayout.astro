@@ -31,18 +31,10 @@ import "@/styles/globals.css";
 				</a>
 				<Navigation client:idle />
 			</div>
-			<div class="flex h-screen mt-16">
-				<div class="w-1/4">
-					<!-- <Column /> -->
-				</div>
-				<div class="w-1/2 flex flex-col items-center justify-center">
-					<slot />
-				</div>
-				<div class="w-1/4"></div>
+			<div class="h-screen mt-16">
+				<slot />
 			</div>
-			<div
-				class="py-1 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4 rounded-sm"
-			>
+			<div class="py-1 mx-auto w-full md:flex">
 				<Footer />
 			</div>
 		</div>

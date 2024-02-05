@@ -16,20 +16,55 @@ import Social from "@/components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Card className="h-1/2 rounded-2xl border-0 bg-background">
-		<CardHeader className="">
-			<CardTitle className="text-theme-text text-5xl">{title}</CardTitle>
-			<CardDescription className="text-theme-link text-sm">
-				{description}
-			</CardDescription>
-		</CardHeader>
-		<CardContent className="text-theme-quote text-base h-24 mt-3">
-			<p>{content}</p>
-		</CardContent>
-		<CardFooter className="text-theme-quote">
-			<Social />
-		</CardFooter>
-	</Card>
+	<div class="h-full flex justify-center items-center">
+		<div
+			class="text-theme-text text-7xl grid place-content-center title-wrapper mb-9"
+		>
+			<div class="title-top ml-1 italic">{title}</div>
+			<div class="title-bottom italic" aria-hidden="true">{title}</div>
+			<div
+				class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-black"
+			>
+			</div>
+			<div
+				class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-black"
+			>
+			</div>
+			<div
+				class="absolute left-[42%] right-[42%] top-[59%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-8"
+			>
+				POWER BY ASTRO
+			</div>
+			<div
+				class="absolute left-[42%] right-[42%] top-[63%] text-xs flex justify-center"
+			>
+				hexWars
+			</div>
+			<div
+				class="absolute left-[42%] right-[42%] top-[67%] text-xs flex justify-center"
+			>
+				2020 - 2024
+			</div>
+		</div>
+	</div>
 </Layout>
 
-<style></style>
+<style>
+	.title-wrapper > div {
+		grid-area: 1/1/-1/-1;
+	}
+	.title-top {
+		background-image: -webkit-linear-gradient(bottom, black, black, black);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+	}
+	.title-bottom {
+		clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+		color: transparent;
+		background: linear-gradient(177deg, black 53%, black 65%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>
