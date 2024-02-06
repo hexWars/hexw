@@ -12,11 +12,13 @@ import "@/styles/globals.css";
             <div
                 class="w-full py-10 flex justify-center text-3xl font-bold italic"
             >
-                POST
+                POSTS
             </div>
             <ul class="mx-24">
                 {
-                    allPosts.map((post) => (
+                    allPosts
+                    .sort((a, b) => (b.data.pubDate.getTime() - a.data.pubDate.getTime()))
+                    .map((post) => (
                         <li class="">
                             <ArticlePost post={post} />
                         </li>
