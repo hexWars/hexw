@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 
 <RootLayout title="{frontmatter.title}">
     <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.pubDate.slice(0, 10)}</p>
+    <p>{frontmatter.pubDate}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by: {frontmatter.author}</p>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />

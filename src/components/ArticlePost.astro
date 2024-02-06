@@ -1,0 +1,16 @@
+---
+const { post } = Astro.props;
+
+const pubDate = post.data.pubDate;
+const year = pubDate.getFullYear().toString().slice(-2);
+const month = ("0" + (pubDate.getMonth() + 1)).slice(-2);
+const date = ("0" + pubDate.getDate()).slice(-2);
+const time = year + "-" + month + "-" + date;
+---
+
+<li>
+    <a href={`/posts/${post.slug}/`} class="flex justify-between">
+        <div>{post.data.title}</div>
+        <div>{time}</div>
+    </a>
+</li>

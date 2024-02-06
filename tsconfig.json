@@ -8,6 +8,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "strictNullChecks": true,
+    "allowJs": true
   }
 }
