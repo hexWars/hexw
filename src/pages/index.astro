@@ -1,18 +1,10 @@
 ---
 import Layout from "../layouts/RootLayout.astro";
 const title = "Sehnsucht";
-const description = "一个空的博客";
-const content =
-	"这是基于TailwindCSS,Shadcn和React的Astro主题，甘道夫打的过几万块的首付款拉丝豆腐，fow二级哦威尔基疯狂的世界里，未来日记微积分酸辣粉";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
-import Social from "@/components/Social.astro";
+const description = "POWER BY ASTRO";
+const description2 = "hexWars";
+const description3 = "NO PAIN, NO GAIN";
+const time = "2020 - 2024";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,17 +25,22 @@ import Social from "@/components/Social.astro";
 			<div
 				class="absolute left-[42%] right-[42%] top-[59%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-8"
 			>
-				POWER BY ASTRO
+				{description}
 			</div>
 			<div
 				class="absolute left-[42%] right-[42%] top-[63%] text-xs flex justify-center"
 			>
-				hexWars
+				{description2}
 			</div>
 			<div
 				class="absolute left-[42%] right-[42%] top-[67%] text-xs flex justify-center"
 			>
-				2020 - 2024
+				{time}
+			</div>
+			<div
+				class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight"
+			>
+				{description3}
 			</div>
 		</div>
 	</div>
