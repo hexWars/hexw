@@ -12,14 +12,16 @@ const time = "2020 - 2024";
 		<div
 			class="text-theme-text text-7xl grid place-content-center title-wrapper mb-9"
 		>
-			<div class="title-top ml-1 italic">{title}</div>
-			<div class="title-bottom italic" aria-hidden="true">{title}</div>
+			<div class="title-top ml-1 italic bg-ring">{title}</div>
+			<div class="title-bottom italic bg-ring" aria-hidden="true">
+				{title}
+			</div>
 			<div
-				class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-black"
+				class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-ring"
 			>
 			</div>
 			<div
-				class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-black"
+				class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-ring"
 			>
 			</div>
 			<div
@@ -51,7 +53,6 @@ const time = "2020 - 2024";
 		grid-area: 1/1/-1/-1;
 	}
 	.title-top {
-		background-image: -webkit-linear-gradient(bottom, black, black, black);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
@@ -59,7 +60,6 @@ const time = "2020 - 2024";
 	.title-bottom {
 		clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
 		color: transparent;
-		background: linear-gradient(177deg, black 53%, black 65%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
