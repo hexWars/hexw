@@ -12,6 +12,21 @@ export const LOCALE = {
     lang: "zh",
 } as const;
 
+export const NAVMENU = [
+    {
+        name: 'POST',
+        url: '/article/',
+    },
+    {
+        name: 'TAG',
+        url: '/tag/',
+    },
+    {
+        name: 'ABOUT',
+        url: '/about/',
+    },
+]
+
 export const SOCIALS: SocialObject = [
     {
         name: "Github",

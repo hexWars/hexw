@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TagItem from "../components/TagItem.astro";
 const allPosts = await getCollection("posts");
-const title = "TAGS";
+const title = "TAG";
 const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
