@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TagItem from "../components/TagItem.astro";
+const allPosts = await getCollection("posts");
+const title = "TAGS";
+const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout title={title}>
+    {
+        uniqueTags.map((item) => <TagItem url="" tag={item} />)
+    }
+</BaseLayout>
