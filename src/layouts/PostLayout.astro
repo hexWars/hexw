@@ -4,10 +4,15 @@ const { frontmatter } = Astro.props;
 ---
 
 <RootLayout title="{frontmatter.title}">
-    <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.pubDate}</p>
-    <p><em>{frontmatter.description}</em></p>
-    <p>Written by: {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-    <slot />
+    <div class="w-1/4"></div>
+    <div class="w-1/2 flex">
+        <article class="prose prose-stone">
+            <h1>{frontmatter.title}</h1>
+            <p>{frontmatter.pubDate}</p>
+            <p><em>{frontmatter.description}</em></p>
+            <p>Written by: {frontmatter.author}</p>
+            <slot />
+        </article>
+    </div>
+    <div class="w-1/4"></div>
 </RootLayout>
