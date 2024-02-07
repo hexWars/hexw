@@ -8,7 +8,7 @@
 
 HEXW is an Astro theme based on Shadcn, TailwindCSS, and React. It allows for easy construction of blog websites.
 
-## 💡 特征
+## 💡 Features
 
 - [X]  Home, Archive, and Tags pages are completed.
 
@@ -20,7 +20,7 @@ TODO:
 - [ ] responsive page
 - [ ] ...
   
-## 🚀 start
+## 🚀 Start
 
 ...
 
@@ -39,7 +39,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 💻 preview
+## 💻 Preview
 
 ![light](./assets/light.png)
 ![dark](./assets/dark.png)
