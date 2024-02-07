@@ -1,16 +1,24 @@
 ---
 const { post } = Astro.props;
+import { Button } from "@/components/ui/button";
 
 const pubDate = post.data.pubDate;
-const year = pubDate.getFullYear().toString().slice(-2);
+const year = pubDate.getFullYear().toString();
 const month = ("0" + (pubDate.getMonth() + 1)).slice(-2);
 const date = ("0" + pubDate.getDate()).slice(-2);
 const time = year + "-" + month + "-" + date;
 ---
 
-<li>
-    <a href={`/posts/${post.slug}/`} class="flex justify-between py-1">
+<li class="group">
+    <a
+        href={`/posts/${post.slug}/`}
+        class="flex justify-between rounded-lg px-2 py-1 group-hover:bg-accent"
+    >
         <div class="font-medium">{post.data.title}</div>
-        <div class="font-medium">{time}</div>
+        <Button
+            className="font-medium h-6 bg-background text-foreground group-hover:bg-ring group-hover:text-background"
+        >
+            {time}
+        </Button>
     </a>
 </li>

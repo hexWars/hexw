@@ -8,7 +8,7 @@ const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <BaseLayout title={title}>
-    {
-        uniqueTags.map((item) => <TagItem url="" tag={item} />)
-    }
+    <div class="grid grid-cols-6 gap-x-2">
+        {uniqueTags.map((item) => <TagItem url="" tag={item} />)}
+    </div>
 </BaseLayout>

@@ -2,8 +2,8 @@
 const { tag, url } = Astro.props;
 ---
 
-<a
-    href={url}
-    class="px-5 py-10 text-lg font-semibold underline decoration-ring decoration-4 hover:decoration-[3px]"
-    >{tag}</a
+<div
+    class="px-5 py-1 text-lg font-semibold underline decoration-ring decoration-4 hover:decoration-[3px]"
 >
+    <a href={url}>{tag}</a>
+</div>
