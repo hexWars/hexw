@@ -21,8 +21,13 @@ export function Navigation() {
         <NavigationMenu className='bg-opacity-50 w-1/2'>
             <NavigationMenuList className=''>
                 {
-                    NAVMENU.map((item) =>
-                        <NavigationMenuItem>
+                    NAVMENU
+                        .sort(
+                            (a, b) =>
+                                parseInt(a.id) - parseInt(b.id),
+                        )
+                        .map((item) =>
+                        <NavigationMenuItem id={item.id}>
                             <Button variant="ghost" className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
                                 <a href={item.url}>
                                     {item.name}

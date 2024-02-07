@@ -14,14 +14,17 @@ export const LOCALE = {
 
 export const NAVMENU = [
     {
+        id: '1',
         name: 'POST',
         url: '/article/',
     },
     {
+        id: '2',
         name: 'TAG',
         url: '/tag/',
     },
     {
+        id: '3',
         name: 'ABOUT',
         url: '/about/',
     },
