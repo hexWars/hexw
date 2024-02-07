@@ -1,0 +1,19 @@
+---
+import RootLayout from "./RootLayout.astro";
+const { frontmatter, title } = Astro.props;
+---
+
+<RootLayout title="{frontmatter.title}">
+    <div class="w-full flex flex-1 justify-center">
+        <div class="w-1/2 flex flex-col mb-32">
+            <div
+                class="w-full py-10 flex justify-center text-3xl font-bold italic"
+            >
+                {title}
+            </div>
+            <div class="shadow-lg shadow-slate-100 px-3 py-3 ">
+                <slot />
+            </div>
+        </div>
+    </div>
+</RootLayout>

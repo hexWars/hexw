@@ -9,8 +9,8 @@ const time = year + "-" + month + "-" + date;
 ---
 
 <li>
-    <a href={`/posts/${post.slug}/`} class="flex justify-between">
-        <div>{post.data.title}</div>
-        <div>{time}</div>
+    <a href={`/posts/${post.slug}/`} class="flex justify-between py-1">
+        <div class="font-medium">{post.data.title}</div>
+        <div class="font-medium">{time}</div>
     </a>
 </li>

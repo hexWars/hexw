@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/RootLayout.astro";
+import RootLayout from "../layouts/RootLayout.astro";
 const title = "Sehnsucht";
 const description = "POWER BY ASTRO";
 const description2 = "hexWars";
@@ -7,46 +7,48 @@ const description3 = "NO PAIN, NO GAIN";
 const time = "2020 - 2024";
 ---
 
-<Layout title="Welcome to Astro.">
+<RootLayout title="Welcome to Astro.">
 	<div class="h-full flex justify-center items-center">
 		<div
-			class="text-theme-text text-7xl grid place-content-center title-wrapper mb-9"
+			class="text-theme-text text-7xl grid title-wrapper mb-[2.7%] w-screen h-full items-center justify-center"
 		>
-			<div class="title-top ml-1 italic bg-ring">{title}</div>
+			<div class="title-top ml-1 italic bg-ring">
+				{title}
+			</div>
 			<div class="title-bottom italic bg-ring" aria-hidden="true">
 				{title}
 			</div>
-			<div
-				class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-ring"
-			>
-			</div>
-			<div
-				class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-ring"
-			>
-			</div>
-			<div
-				class="absolute left-[42%] right-[42%] top-[59%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-8"
-			>
-				{description}
-			</div>
-			<div
-				class="absolute left-[42%] right-[42%] top-[63%] text-xs flex justify-center"
-			>
-				{description2}
-			</div>
-			<div
-				class="absolute left-[42%] right-[42%] top-[67%] text-xs flex justify-center"
-			>
-				{time}
-			</div>
-			<div
-				class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight"
-			>
-				{description3}
-			</div>
+		</div>
+		<div
+			class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-ring"
+		>
+		</div>
+		<div
+			class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-ring"
+		>
+		</div>
+		<div
+			class="absolute left-[42%] right-[42%] top-[59%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-8"
+		>
+			{description}
+		</div>
+		<div
+			class="absolute left-[42%] right-[42%] top-[63%] text-xs flex justify-center"
+		>
+			{description2}
+		</div>
+		<div
+			class="absolute left-[42%] right-[42%] top-[67%] text-xs flex justify-center"
+		>
+			{time}
+		</div>
+		<div
+			class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight"
+		>
+			{description3}
 		</div>
 	</div>
-</Layout>
+</RootLayout>
 
 <style>
 	.title-wrapper > div {
