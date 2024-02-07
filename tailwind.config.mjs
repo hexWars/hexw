@@ -19,13 +19,6 @@ export default {
     },
     extend: {
       colors: {
-        "theme-bg": 'hsl(--theme-bg)',
-        "theme-link": 'hsl(--theme-link)',
-        "theme-text": 'hsl(--theme-text)',
-        "theme-accent": 'hsl(--theme-accent)',
-        "theme-accent-2": 'hsl(--theme-accent-2)',
-        "theme-quote": 'hsl(--theme-quote)',
-
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
