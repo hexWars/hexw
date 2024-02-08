@@ -4,7 +4,7 @@
 
 > Welcome to give me suggestions.
 
-![pin](./assets/pin.png)
+![pin](./assets/purple-light.png)
 
 HEXW is an Astro theme based on Shadcn, TailwindCSS, and React. It allows for easy construction of blog websites.
 
@@ -41,5 +41,9 @@ All commands are run from the root of the project, from a terminal:
 
 ## 💻 Preview
 
+![purple](./assets/purple-dark.png)
+![blue](./assets/blue-dark.png)
+![red](./assets/red-dark.png)
+![pin](./assets/pin.png)
 ![light](./assets/light.png)
 ![dark](./assets/dark.png)

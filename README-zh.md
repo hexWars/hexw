@@ -4,7 +4,7 @@
 
 > 欢迎给我建议
 
-![pin](./assets/pin.png)
+![pin](./assets/purple-light.png)
 
 HEXW是一款基于Shadcn, TailwindCSS, React的Astro主题, 可以方便的构建博客网站
 
@@ -41,5 +41,9 @@ TODO:
 
 ## 💻 预览
 
+![purple](./assets/purple-dark.png)
+![blue](./assets/blue-dark.png)
+![red](./assets/red-dark.png)
+![pin](./assets/pin.png)
 ![light](./assets/light.png)
 ![dark](./assets/dark.png)
