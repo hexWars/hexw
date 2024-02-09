@@ -42,7 +42,6 @@ TODO:
 ## 💻 预览
 
 ![purple](./assets/purple-dark.png)
-![blue](./assets/blue-dark.png)
 ![red](./assets/red-dark.png)
 ![pin](./assets/pin.png)
 ![light](./assets/light.png)

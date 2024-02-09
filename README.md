@@ -42,7 +42,6 @@ All commands are run from the root of the project, from a terminal:
 ## 💻 Preview
 
 ![purple](./assets/purple-dark.png)
-![blue](./assets/blue-dark.png)
 ![red](./assets/red-dark.png)
 ![pin](./assets/pin.png)
 ![light](./assets/light.png)
