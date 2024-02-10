@@ -5,6 +5,7 @@ const description = "POWER BY ASTRO";
 const description2 = "hexWars";
 const description3 = "NO PAIN, NO GAIN";
 const time = "2020 - 2024";
+import Dragon from "/public/dragon.svg";
 ---
 
 <RootLayout title="Welcome to Astro.">
@@ -50,11 +51,16 @@ const time = "2020 - 2024";
 		>
 			{description3}
 		</div>
+		<img
+			src="/dragon.svg"
+			alt="dragon"
+			class="z-0 absolute left-[59%] right-[42%] top-[44%] h-[5%] blur-none"
+		/>
 		<!-- 圆 -->
-		<div
-			class="absolute left-[60%] right-[42%] top-[10%] text-xl rounded-full bg-ring w-[380px] h-[380px] transition hover:scale-110 z-0 duration-1000 ease-in-out blur-3xl"
+		<!-- <div
+			class="absolute max-h-screen max-w-screen left-[60%] right-[42%] top-[10%] text-xl rounded-full bg-ring w-[380px] h-[380px] transition hover:scale-[110%] z-0 duration-1000 ease-in-out blur-3xl"
 		>
-		</div>
+		</div> -->
 	</div>
 </RootLayout>
 
