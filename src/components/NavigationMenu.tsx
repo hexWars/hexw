@@ -27,7 +27,7 @@ export function Navigation() {
                                 parseInt(a.id) - parseInt(b.id),
                         )
                         .map((item) =>
-                        <NavigationMenuItem id={item.id}>
+                        <NavigationMenuItem key={item.id}>
                             <Button variant="ghost" className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
                                 <a href={item.url}>
                                     {item.name}
