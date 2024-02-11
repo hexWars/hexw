@@ -3,7 +3,19 @@ const { tag, url } = Astro.props;
 ---
 
 <div
-    class="px-5 py-1 text-lg font-semibold underline decoration-ring decoration-4 hover:decoration-[3px]"
+    class="text-lg font-semibold transition ease-in-out duration-300 hover:scale-125"
 >
-    <a href={url}>{tag}</a>
+    <!-- <a href={url} class="relative px-3 mx-5">
+        <span class="absolute text-ring right-0 top-0">1</span>
+        <span class="truncate ...">{tag}</span>
+    </a> -->
+    <a href={url} class="grid" title={tag}>
+        <span
+            class="col-start-1 row-start-1 justify-self-end w-[100%] truncate ..."
+            >{tag}</span
+        >
+        <span class="col-start-2 row-start-1 justify-self-end text-ring mr-2"
+            >1</span
+        >
+    </a>
 </div>
