@@ -16,12 +16,12 @@ export const NAVMENU = [
     {
         id: '1',
         name: 'POST',
-        url: '/article/',
+        url: '/posts/',
     },
     {
         id: '2',
         name: 'TAG',
-        url: '/tag/',
+        url: '/tags/',
     },
     {
         id: '3',

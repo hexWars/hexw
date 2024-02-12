@@ -6,7 +6,7 @@ author: 'Astro 学习者'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "222", "learning"]
+tags: ["111", "222", "333"]
 ---
 
 # 我的第一篇博客文章

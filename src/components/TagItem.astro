@@ -1,5 +1,5 @@
 ---
-const { tag, url } = Astro.props;
+const { tag, url, num } = Astro.props;
 ---
 
 <div
@@ -14,8 +14,8 @@ const { tag, url } = Astro.props;
             class="col-start-1 row-start-1 justify-self-end w-[100%] truncate ..."
             >{tag}</span
         >
-        <span class="col-start-2 row-start-1 justify-self-end text-ring mr-2"
-            >1</span
+        <span class="col-start-2 row-start-1 justify-self-end text-ring mr-5"
+            >{num}</span
         >
     </a>
 </div>
