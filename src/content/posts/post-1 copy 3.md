@@ -7,6 +7,7 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
 tags: ["astro", "222", "learning"]
+categories: ["123", "434"]
 ---
 
 # 我的第一篇博客文章

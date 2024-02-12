@@ -20,11 +20,16 @@ export const NAVMENU = [
     },
     {
         id: '2',
+        name: 'CATEGORY',
+        url: '/categories/',
+    },
+    {
+        id: '3',
         name: 'TAG',
         url: '/tags/',
     },
     {
-        id: '3',
+        id: '4',
         name: 'ABOUT',
         url: '/about/',
     },

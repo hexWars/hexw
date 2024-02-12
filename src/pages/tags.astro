@@ -8,9 +8,6 @@ const uniqueTags: string[] = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
 ];
 const tagMap: Map<string, number> = new Map();
-// uniqueTags.forEach((tag: string) => {
-//     tagMap.has(tag) ? tagMap.set(tag, tagMap.get(tag) + 1) : tagMap.set(tag, 1);
-// });
 allPosts.forEach((post) => {
     post.data.tags.forEach((tag) => {
         tagMap.has(tag)
