@@ -6,12 +6,12 @@ const allPosts = await getCollection("posts");
 const title = "TAG";
 const uniqueTags: string[] = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
-];
+] as string[];
 const tagMap: Map<string, number> = new Map();
 allPosts.forEach((post) => {
     post.data.tags.forEach((tag) => {
         tagMap.has(tag)
-            ? tagMap.set(tag, tagMap.get(tag) + 1)
+            ? tagMap.set(tag, tagMap.get(tag)! + 1)
             : tagMap.set(tag, 1);
     });
 });

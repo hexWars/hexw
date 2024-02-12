@@ -6,12 +6,12 @@ const allPosts = await getCollection("posts");
 const title = "CATEGORY";
 const uniqueCategorys: string[] = [
     ...new Set(allPosts.map((post) => post.data.categories).flat()),
-];
+] as string[];
 const categoryMap: Map<string, number> = new Map();
 allPosts.forEach((post) => {
     post.data.categories.forEach((category) => {
         categoryMap.has(category)
-            ? categoryMap.set(category, categoryMap.get(category) + 1)
+            ? categoryMap.set(category, categoryMap.get(category)! + 1)
             : categoryMap.set(category, 1);
     });
 });
