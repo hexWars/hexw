@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import ArticlePost from "../components/ArticleItem.astro";
+import ArticleItem from "@/components/ArticleItem.astro";
 const allPosts = await getCollection("posts");
 const title = "POST";
 ---
@@ -14,7 +14,7 @@ const title = "POST";
                     (a, b) =>
                         b.data.pubDate.getTime() - a.data.pubDate.getTime(),
                 )
-                .map((post) => <ArticlePost post={post} />)
+                .map((post) => <ArticleItem post={post} />)
         }
     </ul>
 </BaseLayout>

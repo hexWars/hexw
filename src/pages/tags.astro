@@ -21,7 +21,11 @@ allPosts.forEach((post) => {
     <div class="grid grid-cols-6 gap-x-2 gap-y-1">
         {
             uniqueTags.map((item) => (
-                <TagItem url="" tag={item} num={tagMap.get(item)} />
+                <TagItem
+                    url={"/tag/" + item}
+                    tag={item}
+                    num={tagMap.get(item)}
+                />
             ))
         }
     </div>

@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleItem from "@/components/ArticleItem.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("posts");
+    const uniqueTags: string[] = [
+        ...new Set(allPosts.map((post) => post.data.tags).flat()),
+    ] as string[];
+    return uniqueTags.map((tag) => ({
+        params: { tag: tag },
+    }));
+}
+
+const { tag } = Astro.params;
+const tagPosts = await getCollection("posts");
+const tagPost = [];
+tagPosts.forEach((post) => {
+    if (post.data.tags.find((thisTag) => thisTag === tag)) {
+        tagPost.push(post);
+    }
+});
+---
+
+<BaseLayout title={tag}>
+    <ul class="">
+        {tagPost.map((post) => <ArticleItem post={post} />)}
+    </ul>
+</BaseLayout>
