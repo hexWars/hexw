@@ -2,6 +2,7 @@
 import RootLayout from "./RootLayout.astro";
 import { Badge } from "@/components/ui/badge";
 import { SITE } from "@/config";
+import { Tag } from "lucide-react";
 const { frontmatter } = Astro.props;
 ---
 
@@ -27,20 +28,6 @@ const { frontmatter } = Astro.props;
                     {SITE.author}
                 </div>
             </div>
-            <div class="text-base text-ring font-normal">
-                <div>
-                    {
-                        frontmatter.tags.map((tag: string) => (
-                            <Badge
-                                variant="secondary"
-                                className="hover:bg-ring/70 mx-1"
-                            >
-                                {tag}
-                            </Badge>
-                        ))
-                    }
-                </div>
-            </div>
         </div>
         <div class="">
             <article
@@ -54,6 +41,22 @@ const { frontmatter } = Astro.props;
             >
                 <slot />
             </article>
+        </div>
+        <hr />
+        <div class="mx-8 my-6 text-base text-ring font-normal flex">
+            <Tag className="h-5 w-5 mx-2" />
+            <div>
+                {
+                    frontmatter.tags.map((tag: string) => (
+                        <Badge
+                            variant="secondary"
+                            className="hover:bg-ring/70 mx-1"
+                        >
+                            {tag}
+                        </Badge>
+                    ))
+                }
+            </div>
         </div>
     </div>
     <div class="w-1/4"></div>
