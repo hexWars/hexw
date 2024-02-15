@@ -1,6 +1,7 @@
 ---
 import RootLayout from "./RootLayout.astro";
 import { Badge } from "@/components/ui/badge";
+import { SITE } from "@/config";
 const { frontmatter } = Astro.props;
 ---
 
@@ -23,7 +24,7 @@ const { frontmatter } = Astro.props;
                 </div>
                 <div class="px-1">·</div>
                 <div>
-                    {frontmatter.author}
+                    {SITE.author}
                 </div>
             </div>
             <div class="text-base text-ring font-normal">
@@ -32,7 +33,7 @@ const { frontmatter } = Astro.props;
                         frontmatter.tags.map((tag: string) => (
                             <Badge
                                 variant="secondary"
-                                className="hover:bg-ring/20 mx-1"
+                                className="hover:bg-ring/70 mx-1"
                             >
                                 {tag}
                             </Badge>
