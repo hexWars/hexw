@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const tagPosts = await getCollection("posts");
-const tagPost = [];
+const tagPost: any[] = [];
 tagPosts.forEach((post) => {
     if (post.data.tags.find((thisTag) => thisTag === tag)) {
         tagPost.push(post);

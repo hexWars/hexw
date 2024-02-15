@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { category } = Astro.params;
 const categoryPosts = await getCollection("posts");
-const categoryPost = [];
+const categoryPost: any[] = [];
 categoryPosts.forEach((post) => {
     if (post.data.categories.find((thisCategory) => thisCategory === category)) {
         categoryPost.push(post);

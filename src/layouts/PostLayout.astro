@@ -1,18 +1,59 @@
 ---
 import RootLayout from "./RootLayout.astro";
+import { Badge } from "@/components/ui/badge";
 const { frontmatter } = Astro.props;
 ---
 
 <RootLayout title="{frontmatter.title}">
     <div class="w-1/4"></div>
-    <div class="w-1/2 flex">
-        <article class="prose prose-stone">
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.pubDate}</p>
-            <p><em>{frontmatter.description}</em></p>
-            <p>Written by: {frontmatter.author}</p>
-            <slot />
-        </article>
+    <div class="w-1/2 flex-1 flex flex-col shadow">
+        <div class="w-full py-10 px-8 flex flex-col items-start shadow-sm">
+            <div class="text-5xl font-bold">
+                {frontmatter.title}
+            </div>
+            <div class="my-3 text-base flex font-normal">
+                <div class="">
+                    {
+                        frontmatter.pubDate.getFullYear() +
+                            "-" +
+                            frontmatter.pubDate.getMonth() +
+                            "-" +
+                            frontmatter.pubDate.getDate()
+                    }
+                </div>
+                <div class="px-1">·</div>
+                <div>
+                    {frontmatter.author}
+                </div>
+            </div>
+            <div class="text-base text-ring font-normal">
+                <div>
+                    {
+                        frontmatter.tags.map((tag: string) => (
+                            <Badge
+                                variant="secondary"
+                                className="hover:bg-ring/20 mx-1"
+                            >
+                                {tag}
+                            </Badge>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <article
+                class="mx-8 my-5 dark:prose-invert
+            prose-base prose prose-gray max-w-none
+            prose-a:text-ring
+            prose-strong:text-ring
+            prose-headings:underline prose-headings:decoration-ring
+            prose-blockquote:text-ring/60
+            prose-thead:bg-ring/5"
+            >
+                <slot />
+            </article>
+        </div>
     </div>
     <div class="w-1/4"></div>
 </RootLayout>

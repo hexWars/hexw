@@ -27,16 +27,34 @@ export function Navigation() {
                                 parseInt(a.id) - parseInt(b.id),
                         )
                         .map((item) =>
-                        <NavigationMenuItem key={item.id}>
-                            <Button variant="ghost" className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
-                                <a href={item.url}>
-                                    {item.name}
-                                </a>
-                            </Button>
-                        </NavigationMenuItem>
-                    )
+                            <NavigationMenuItem key={item.id}>
+                                <Button variant="ghost" className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
+                                    <a href={item.url}>
+                                        {item.name}
+                                    </a>
+                                </Button>
+                            </NavigationMenuItem>
+                        )
                 }
-                
+                {/* <NavigationMenuItem className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
+                    <NavigationMenuTrigger className=''>Getting started</NavigationMenuTrigger>
+                    <NavigationMenuContent className='absolute'>
+
+                        <ul>
+                            <NavigationMenuItem>fseed</NavigationMenuItem>
+                            <NavigationMenuLink>fsd</NavigationMenuLink>
+
+                            <NavigationMenuLink>
+                                <div>efewefwe</div>
+                            </NavigationMenuLink>
+
+
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem> */}
+
+
+
                 <NavigationMenuItem>
                     <ModeToggle />
                 </NavigationMenuItem>

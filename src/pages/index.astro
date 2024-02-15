@@ -10,6 +10,7 @@ import Dragon from "/public/dragon.svg";
 
 <RootLayout title="Welcome to Astro.">
 	<div class="h-full flex justify-center items-center z-10">
+		<!-- title -->
 		<div
 			class="text-foreground text-7xl grid title-wrapper mb-[2.7%] w-screen h-full items-center justify-center"
 		>
@@ -20,8 +21,9 @@ import Dragon from "/public/dragon.svg";
 				{title}
 			</div>
 		</div>
+		<!-- long line -->
 		<div
-			class="absolute left-0 right-0 top-[49.5%] transform -translate-y-1/2 h-[0.2rem] bg-foreground"
+			class="absolute left-0 right-0 top-[49.9%] transform -translate-y-1/2 h-[0.2rem] bg-foreground"
 		>
 		</div>
 		<div
@@ -49,21 +51,21 @@ import Dragon from "/public/dragon.svg";
 			{description3}
 		</div>
 	</div>
-	<div
+	<!-- <div
 		class="w-full h-[90%] absolute flex place-items-center justify-center z-0"
 	>
 		<img
-			src="/dragon2.svg"
+			src="/dragon.svg"
 			alt="dragon2"
 			class="h-[80%] blur fill-ring stroke-ring"
 		/>
-	</div>
+	</div> -->
 
 	<!-- 圆 -->
-	<!-- <div
+	<div
 		class="absolute max-h-screen max-w-screen left-[60%] right-[42%] top-[10%] text-xl rounded-full bg-ring w-[380px] h-[380px] transition hover:scale-[110%] z-0 duration-1000 ease-in-out blur-3xl"
 	>
-	</div> -->
+	</div>
 </RootLayout>
 
 <style>
