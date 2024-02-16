@@ -4,25 +4,34 @@
 
 > Welcome to give me suggestions.
 
-![pin](./assets/purple-light.png)
+![pin](./assets/pin.png)
 
 HEXW is an Astro theme based on Shadcn, TailwindCSS, and React. It allows for easy construction of blog websites.
 
 ## 💡 Features
 
-- [X]  Home, Archive, and Tags pages are completed.
+- [X] home, posts, articles, tags pages are completed.
+- [X] rss
+- [X] global config
+- [X] dark mode
 
 TODO:
 
-- [ ] global config
-- [ ] rss
 - [ ] search
 - [ ] responsive page
-- [ ] ...
+- [ ] sitemap
+- [ ] socials
+- [ ] SEO
+- [ ] pagination
+- [ ] timeline
   
 ## 🚀 Start
 
-...
+You can 'clone' this product.
+
+```nodejs
+npm install
+```
 
 <!-- TODO: 安装指令，更多请查看demo站点 -->
 
@@ -41,8 +50,10 @@ All commands are run from the root of the project, from a terminal:
 
 ## 💻 Preview
 
-![purple](./assets/purple-dark.png)
-![red](./assets/red-dark.png)
-![pin](./assets/pin.png)
 ![light](./assets/light.png)
 ![dark](./assets/dark.png)
+![purple](./assets/purple-dark.png)
+![red](./assets/red-dark.png)
+![purple-light](./assets/purple-light.png)
+![purple-dragon](./assets/purple-dragon.png)
+![purple-leaf](./assets/leaf.png)
