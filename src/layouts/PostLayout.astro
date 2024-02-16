@@ -32,12 +32,13 @@ const { frontmatter } = Astro.props;
         <div class="">
             <article
                 class="mx-8 my-5 dark:prose-invert
-            prose-base prose prose-gray max-w-none
+            prose-base prose max-w-none
             prose-a:text-ring
             prose-strong:text-ring
             marker:text-ring
+            prose-blockquote:bg-ring/5
             prose-headings:underline prose-headings:decoration-ring
-            prose-thead:bg-ring/5"
+            hover:prose-tr:bg-ring/20"
             >
                 <slot />
             </article>

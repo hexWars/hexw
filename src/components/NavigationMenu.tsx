@@ -36,24 +36,6 @@ export function Navigation() {
                             </NavigationMenuItem>
                         )
                 }
-                {/* <NavigationMenuItem className='text-base subpixel-antialiased font-medium border-2 border-transparent hover:border-ring'>
-                    <NavigationMenuTrigger className=''>Getting started</NavigationMenuTrigger>
-                    <NavigationMenuContent className='absolute'>
-
-                        <ul>
-                            <NavigationMenuItem>fseed</NavigationMenuItem>
-                            <NavigationMenuLink>fsd</NavigationMenuLink>
-
-                            <NavigationMenuLink>
-                                <div>efewefwe</div>
-                            </NavigationMenuLink>
-
-
-                        </ul>
-                    </NavigationMenuContent>
-                </NavigationMenuItem> */}
-
-
 
                 <NavigationMenuItem>
                     <ModeToggle />
