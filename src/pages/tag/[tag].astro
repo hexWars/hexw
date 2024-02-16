@@ -25,6 +25,13 @@ tagPosts.forEach((post) => {
 
 <BaseLayout title={tag}>
     <ul class="">
-        {tagPost.map((post) => <ArticleItem post={post} />)}
+        {
+            tagPost
+            .sort(
+                (a, b) =>
+                    b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+            )
+            .map((post) => <ArticleItem post={post} />)
+        }
     </ul>
 </BaseLayout>
