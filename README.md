@@ -24,6 +24,7 @@ TODO:
 - [ ] SEO
 - [ ] pagination
 - [ ] timeline
+- [ ] breadcrumb
   
 ## 🚀 Start
 
