@@ -1,4 +1,5 @@
 import React from 'react';
+import { SITE } from '@/config';
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -37,9 +38,9 @@ export function Navigation() {
                         )
                 }
 
-                <NavigationMenuItem>
-                    <ModeToggle />
-                </NavigationMenuItem>
+                {
+                    SITE.lightAndDarkMode ? (<NavigationMenuItem><ModeToggle /></NavigationMenuItem>) : ""
+                }
 
             </NavigationMenuList>
         </NavigationMenu>
