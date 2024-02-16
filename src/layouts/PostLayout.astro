@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 
 <RootLayout title="{frontmatter.title}">
     <div class="w-1/4"></div>
-    <div class="w-1/2 flex-1 flex flex-col shadow">
+    <div class="w-1/2 flex-1 flex flex-col shadow-xl">
         <div class="w-full py-10 px-8 flex flex-col items-start shadow-sm">
             <div class="text-5xl font-bold">
                 {frontmatter.title}
@@ -35,8 +35,8 @@ const { frontmatter } = Astro.props;
             prose-base prose prose-gray max-w-none
             prose-a:text-ring
             prose-strong:text-ring
+            marker:text-ring
             prose-headings:underline prose-headings:decoration-ring
-            prose-blockquote:text-ring/60
             prose-thead:bg-ring/5"
             >
                 <slot />
