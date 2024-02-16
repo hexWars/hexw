@@ -9,6 +9,7 @@ const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
 import { Navigation } from "@/components/NavigationMenu";
 import "@/styles/globals.css";
+import { Rss } from "lucide-react";
 ---
 
 <!doctype html>
@@ -27,9 +28,18 @@ import "@/styles/globals.css";
 			<div
 				class="py-3 px-96 fixed top-0 z-0 max-h-[7%] w-full shadow-sm flex justify-between backdrop-blur"
 			>
-				<a href="/" class="font-bold flex flex-col justify-center">
-					HEXW
-				</a>
+				<div class="flex">
+					<a
+						href="/"
+						class="font-bold flex flex-col justify-center mx-2"
+					>
+						HEXW
+					</a>
+					<a href="/rss.xml" class="flex flex-col justify-center">
+						<Rss className="stroke-ring " />
+					</a>
+				</div>
+
 				<Navigation client:idle />
 			</div>
 			<div class="mt-[5%] flex flex-1">

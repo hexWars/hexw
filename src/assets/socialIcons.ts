@@ -1,7 +1,7 @@
 const socialIcons = {
   Github: `<svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon-tabler"
+    
     stroke-linecap="round"
     stroke-linejoin="round"
   >
@@ -12,7 +12,7 @@ const socialIcons = {
   </svg>`,
   Facebook: `<svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon-tabler"
+    
     stroke-linecap="round"
     stroke-linejoin="round"
   >
@@ -23,7 +23,7 @@ const socialIcons = {
   </svg>`,
   Instagram: `<svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon-tabler"
+    
     stroke-linecap="round"
     stroke-linejoin="round"
   >
@@ -34,7 +34,7 @@ const socialIcons = {
   </svg>`,
   LinkedIn: `<svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon-tabler"
+    
     stroke-linecap="round"
     stroke-linejoin="round"
   >
@@ -47,7 +47,7 @@ const socialIcons = {
   </svg>`,
   Mail: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -57,7 +57,7 @@ const socialIcons = {
     </svg>`,
   Twitter: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -66,7 +66,7 @@ const socialIcons = {
     </svg>`,
   Twitch: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -74,7 +74,7 @@ const socialIcons = {
     </svg>`,
   YouTube: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -83,7 +83,7 @@ const socialIcons = {
     </svg>`,
   WhatsApp: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -93,7 +93,7 @@ const socialIcons = {
     </svg>`,
   Snapchat: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -102,7 +102,7 @@ const socialIcons = {
     </svg>`,
   Pinterest: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -113,7 +113,7 @@ const socialIcons = {
     </svg>`,
   TikTok: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -122,7 +122,7 @@ const socialIcons = {
     </svg>`,
   CodePen: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -136,7 +136,7 @@ const socialIcons = {
     </svg>`,
   Discord: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -150,7 +150,7 @@ const socialIcons = {
     </svg>`,
   GitLab: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -159,7 +159,7 @@ const socialIcons = {
     </svg>`,
   Reddit: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -173,7 +173,7 @@ const socialIcons = {
     </svg>`,
   Skype: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -183,7 +183,7 @@ const socialIcons = {
     </svg>`,
   Steam: `<svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon-tabler"
+      
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -193,14 +193,14 @@ const socialIcons = {
     </svg>`,
   Telegram: `<svg
         xmlns="http://www.w3.org/2000/svg"
-        class="icon-tabler"
+        
         stroke-linecap="round"
         stroke-linejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
       </svg>`,
-  Mastodon: `<svg class="icon-tabler" viewBox="-10 -5 1034 1034" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  Mastodon: `<svg  viewBox="-10 -5 1034 1034" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
     <path fill="currentColor"
   d="M499 112q-93 1 -166 11q-81 11 -128 33l-14 8q-16 10 -32 25q-22 21 -38 47q-21 33 -32 73q-14 47 -14 103v37q0 77 1 119q3 113 18 188q19 95 62 154q50 67 134 89q109 29 210 24q46 -3 88 -12q30 -7 55 -17l19 -8l-4 -75l-22 6q-28 6 -57 10q-41 6 -78 4q-53 -1 -80 -7
   q-43 -8 -67 -30q-29 -25 -35 -72q-2 -14 -2 -29l25 6q31 6 65 10q48 7 93 9q42 2 92 -2q32 -2 88 -9t107 -30q49 -23 81.5 -54.5t38.5 -63.5q9 -45 13 -109q4 -46 5 -97v-41q0 -56 -14 -103q-11 -40 -32 -73q-16 -26 -38 -47q-15 -15 -32 -25q-12 -8 -14 -8

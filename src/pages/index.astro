@@ -3,8 +3,8 @@ import RootLayout from "../layouts/RootLayout.astro";
 import { SOCIALS } from "@/config";
 const title = "Sehnsucht";
 const description = "POWER BY ASTRO";
-const description2 = "hexWars";
-const description3 = "NO PAIN, NO GAIN";
+const author = "hexWars";
+const leftDescription = "A Astro Theme";
 const time = "2020 - 2024";
 ---
 
@@ -28,18 +28,35 @@ const time = "2020 - 2024";
 		</div>
 		<!-- line2 -->
 		<div
-			class="absolute left-[42%] right-[42%] top-[58%] transform -translate-y-1/2 h-[0.1rem] bg-foreground"
+			class="absolute left-[45%] right-[45%] top-[56%] transform -translate-y-1/2 h-[0.1rem] bg-foreground"
 		>
 		</div>
 		<div
-			class="absolute left-[42%] right-[42%] top-[59%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-8"
+			class="absolute left-[42%] right-[42%] top-[58%] text-xs flex font-bold justify-center underline decoration-dotted decoration-1 underline-offset-[20px]"
 		>
 			{description}
 		</div>
+		<!-- <div class="absolute flex bottom-[43%]">
+			{
+				SOCIALS.filter((social) => social.active).map((social) => (
+					<a
+						href={social.href}
+						class="w-5 h-5 mx-1 fill-none stroke-foreground hover:stroke-ring "
+					>
+						<Fragment set:html={socialIcons[social.name]} />
+					</a>
+				))
+			}
+		</div> -->
 		<div
 			class="absolute left-[42%] right-[42%] top-[63%] text-xs flex justify-center"
 		>
-			{description2}
+			{author}
+		</div>
+		<div
+			class="absolute left-[42%] right-[42%] top-[65%] text-xs flex justify-center"
+		>
+			-
 		</div>
 		<div
 			class="absolute left-[42%] right-[42%] top-[67%] text-xs flex justify-center"
@@ -49,7 +66,7 @@ const time = "2020 - 2024";
 		<div
 			class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight text-foreground"
 		>
-			{description3}
+			{leftDescription}
 		</div>
 	</div>
 	<!-- <div
