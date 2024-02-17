@@ -1,4 +1,4 @@
-import type { Site, SocialObject } from "@/types";
+import type { Site } from "@/types";
 import { Github } from "lucide-react";
 
 export const SITE: Site = {

@@ -55,6 +55,7 @@ npm install
 
 ![light](./assets/light.png)
 ![dark](./assets/dark.png)
+![plus](./assets/plus.png)
 ![purple](./assets/purple-dark.png)
 ![red](./assets/red-dark.png)
 ![purple-light](./assets/purple-light.png)
