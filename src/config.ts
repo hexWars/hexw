@@ -38,17 +38,3 @@ export const NAVMENU = [
     },
 ]
 
-export const SOCIALS: SocialObject = [
-    {
-        name: "Github",
-        href: "https://github.com/hexWars/hexw",
-        linkTitle: ` ${SITE.title} on Github`,
-        active: true,
-    },
-    {
-        name: "Mail",
-        href: "mailto:yourmail@gmail.com",
-        linkTitle: `Send an email to ${SITE.title}`,
-        active: true,
-    },
-];

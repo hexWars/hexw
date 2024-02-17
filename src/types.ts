@@ -1,4 +1,3 @@
-import type socialIcons from "@/assets/socialIcons";
 
 export type Site = {
     url: string;
@@ -9,9 +8,3 @@ export type Site = {
     mail: string;
 };
 
-export type SocialObject = {
-    name: keyof typeof socialIcons;
-    href: string;
-    active: boolean;
-    linkTitle: string;
-}[];

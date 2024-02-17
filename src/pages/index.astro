@@ -1,15 +1,16 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
-import { SOCIALS } from "@/config";
+import SocialIcons from "@/components/SocialIcons.astro";
 const title = "Sehnsucht";
 const description = "POWER BY ASTRO";
 const author = "hexWars";
-const leftDescription = "A Astro Theme";
 const time = "2020 - 2024";
 ---
 
 <RootLayout title="Welcome to Astro.">
-	<div class="h-full flex justify-center items-center z-10">
+	<div class="h-full flex justify-center items-center z-10 select-none">
+		<div class=""></div>
+
 		<!-- title -->
 		<div
 			class="text-foreground text-7xl grid title-wrapper mb-[2.7%] w-screen h-full items-center justify-center"
@@ -17,15 +18,72 @@ const time = "2020 - 2024";
 			<div class="title-top ml-1 italic bg-foreground">
 				{title}
 			</div>
-			<div class="title-bottom italic bg-foreground" aria-hidden="true">
+			<div class="title-bottom italic bg-ring" aria-hidden="true">
 				{title}
 			</div>
 		</div>
+		<div
+			class="absolute fill-ring top-[40%] left-[40%] hover:-rotate-12 origin-center ease-in-out duration-300 transition-all"
+		>
+			<svg
+				width="96"
+				height="21"
+				viewBox="0 0 96 21"
+				aria-hidden="true"
+				class="fill-ring"
+				xmlns="http://www.w3.org/2000/svg"
+				style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 21.856px, 0px);"
+				><path
+					d="M79.2202 0.959991L62.7802 17.32L46.3301 0.959991L29.8902 17.32L13.4501 0.959991L0.410156 13.94L0.400146 17.58L13.4501 4.58999L29.8902 20.95L46.3301 4.58999L62.7802 20.95L79.2202 4.58999L93.7302 19.02L95.5402 17.19L79.2202 0.959991Z"
+				></path></svg
+			>
+		</div>
+		<div class="absolute fill-ring top-[50%] left-[60%]">
+			<svg
+				width="15"
+				height="14"
+				viewBox="0 0 15 14"
+				aria-hidden="true"
+				class="fill-ring hover:rotate-45 origin-center"
+				xmlns="http://www.w3.org/2000/svg"
+				style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 21.856px, 0px);"
+				><path
+					d="M13.68 11.51L9.23 7.05998L13.68 2.61C14.24 2.05 14.24 1.12999 13.68 0.569994C13.12 0.00999391 12.2 0.00999391 11.64 0.569994L7.19002 5.02001L2.74001 0.569994C2.18001 0.00999391 1.26003 0.00999391 0.700029 0.569994C0.140029 1.12999 0.140029 2.05 0.700029 2.61L5.15004 7.05998L0.700029 11.51C0.140029 12.07 0.140029 12.99 0.700029 13.55C1.26003 14.11 2.18001 14.11 2.74001 13.55L7.19002 9.09999L11.64 13.55C12.2 14.11 13.12 14.11 13.68 13.55C14.24 12.99 14.24 12.08 13.68 11.51Z"
+				></path></svg
+			>
+		</div>
+
 		<!-- long line -->
 		<div
 			class="absolute left-0 right-0 top-[49.9%] transform -translate-y-1/2 h-[0.2rem] bg-foreground"
 		>
 		</div>
+
+		<!-- <div
+			class="absolute left-[20%] right-[40%] top-[15%] text-9xl italic text-muted rotate-12"
+			aria-hidden="true"
+		>
+			{title}{title}
+		</div> -->
+		<!-- <div
+			class="absolute left-[20%] right-[40%] top-[30%] text-9xl italic text-muted rotate-12"
+			aria-hidden="true"
+		>
+			{title}{title}
+		</div>
+		<div
+			class="absolute left-[20%] right-[40%] top-[45%] text-9xl italic text-muted rotate-12"
+			aria-hidden="true"
+		>
+			{title}{title}
+		</div> -->
+		<!-- <div
+			class="absolute left-[20%] right-[40%] top-[60%] text-9xl italic text-muted rotate-12"
+			aria-hidden="true"
+		>
+			{title}{title}
+		</div> -->
+
 		<!-- line2 -->
 		<div
 			class="absolute left-[45%] right-[45%] top-[56%] transform -translate-y-1/2 h-[0.1rem] bg-foreground"
@@ -63,13 +121,15 @@ const time = "2020 - 2024";
 		>
 			{time}
 		</div>
+		<!-- left -->
 		<div
-			class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight text-foreground"
+			class="absolute left-[4%] right-[42%] top-[45%] text-xl font-extralight text-foreground flex gap-1"
 		>
-			{leftDescription}
+			<SocialIcons />
 		</div>
 	</div>
-	<div
+	<!-- picture -->
+	<!-- <div
 		class="w-full h-[90%] absolute flex place-items-center justify-center z-0"
 	>
 		<img
@@ -77,7 +137,7 @@ const time = "2020 - 2024";
 			alt="dragon2"
 			class="h-[80%] blur fill-ring stroke-ring"
 		/>
-	</div>
+	</div> -->
 
 	<!-- 圆 -->
 	<!-- <div
