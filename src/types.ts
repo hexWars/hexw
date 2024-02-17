@@ -6,6 +6,7 @@ export type Site = {
     describe: string;
     title: string;
     lightAndDarkMode: boolean;
+    mail: string;
 };
 
 export type SocialObject = {

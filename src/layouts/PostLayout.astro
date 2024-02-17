@@ -2,7 +2,7 @@
 import RootLayout from "./RootLayout.astro";
 import { Badge } from "@/components/ui/badge";
 import { SITE } from "@/config";
-import { Tag } from "lucide-react";
+import { ArrowRight, Tag } from "lucide-react";
 const { frontmatter } = Astro.props;
 ---
 
@@ -60,5 +60,18 @@ const { frontmatter } = Astro.props;
             </div>
         </div>
     </div>
-    <div class="w-1/4"></div>
+    <div class="w-1/4 flex">
+        <div class="fixed mx-8 bottom-10 flex origin-left -rotate-90">
+            <a href="" class="select-none text-lg"
+                ><ArrowRight
+                    className="stroke-ring scale-125 hover:scale-150 transition delay-0 ease-in-out"
+                /></a
+            >
+
+            <a href={"mailto:" + SITE.mail} class="select-none text-lg px-2"
+                >{SITE.mail}</a
+            >
+            <!-- <p class="select-none text-lg px-2">{SITE.mail}</p> -->
+        </div>
+    </div>
 </RootLayout>

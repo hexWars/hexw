@@ -7,6 +7,7 @@ export const SITE: Site = {
     describe: "A minimal, responsive and SEO-friendly Astro blog theme.",
     title: "Sehnsucht",
     lightAndDarkMode: true,
+    mail: "mail@example.com"
 };
 
 export const LOCALE = {
