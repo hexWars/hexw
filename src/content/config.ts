@@ -9,9 +9,10 @@ const postsCollection = defineCollection({
         image: z.object({
             url: z.string(),
             alt: z.string()
-        }),
+        }).optional(),
         tags: z.array(z.string()),
         categories: z.array(z.string()),
+        hidden: z.boolean().optional(),
     })
 });
 // 导出一个单独的 `collections` 对象来注册你的集合

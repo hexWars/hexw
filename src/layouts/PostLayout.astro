@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 <RootLayout title="{frontmatter.title}">
     <div class="w-1/4"></div>
     <div class="w-1/2 flex-1 flex flex-col shadow-xl shadow-foreground/10">
-        <p id="top-title"></p>
+        <p id="top"></p>
         <div class="w-full py-10 px-8 flex flex-col items-start shadow-sm">
             <div class="text-5xl font-bold">
                 {frontmatter.title}
@@ -67,7 +67,7 @@ const { frontmatter } = Astro.props;
         {
             (
                 <div
-                    onclick={"scrollToSection('top-title')"}
+                    onclick={"scrollToSection('top')"}
                     class="fixed mx-8 bottom-10 flex origin-left -rotate-90"
                 >
                     <ArrowRight className="stroke-ring scale-125 hover:scale-150 transition delay-0 ease-in-out" />

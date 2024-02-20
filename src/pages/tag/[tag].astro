@@ -27,11 +27,12 @@ tagPosts.forEach((post) => {
     <ul class="">
         {
             tagPost
-            .sort(
-                (a, b) =>
-                    b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-            )
-            .map((post) => <ArticleItem post={post} />)
+                .filter((e) => !e.data.hidden)
+                .sort(
+                    (a, b) =>
+                        b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+                )
+                .map((post) => <ArticleItem post={post} />)
         }
     </ul>
 </BaseLayout>

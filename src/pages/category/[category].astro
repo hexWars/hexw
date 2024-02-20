@@ -17,7 +17,9 @@ const { category } = Astro.params;
 const categoryPosts = await getCollection("posts");
 const categoryPost: any[] = [];
 categoryPosts.forEach((post) => {
-    if (post.data.categories.find((thisCategory) => thisCategory === category)) {
+    if (
+        post.data.categories.find((thisCategory) => thisCategory === category)
+    ) {
         categoryPost.push(post);
     }
 });
@@ -27,11 +29,12 @@ categoryPosts.forEach((post) => {
     <ul class="">
         {
             categoryPost
-            .sort(
-                (a, b) =>
-                    b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-            )
-            .map((post) => <ArticleItem post={post} />)
+                .filter((e) => !e.data.hidden)
+                .sort(
+                    (a, b) =>
+                        b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+                )
+                .map((post) => <ArticleItem post={post} />)
         }
     </ul>
 </BaseLayout>

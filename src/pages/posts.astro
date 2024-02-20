@@ -10,6 +10,7 @@ const title = "POST";
     <ul class="">
         {
             allPosts
+                .filter((e) => !e.data.hidden)
                 .sort(
                     (a, b) =>
                         b.data.pubDate.getTime() - a.data.pubDate.getTime(),
