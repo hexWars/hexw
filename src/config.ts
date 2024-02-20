@@ -1,4 +1,4 @@
-import type { Site } from "@/types";
+import type { Site, Locale, NavMenu, MdConfig } from "@/types";
 import { Github } from "lucide-react";
 
 export const SITE: Site = {
@@ -10,12 +10,18 @@ export const SITE: Site = {
     mail: "mail@example.com"
 };
 
-export const LOCALE = {
+export const LOCALE: Locale = {
     lang: "zh",
     langTag: "zh-cn"
 } as const;
 
-export const NAVMENU = [
+export const MDCONFIG: MdConfig = {
+    show: true,
+    max: 1,
+    min: 3,
+}
+
+export const NAVMENU: NavMenu[] = [
     {
         id: '1',
         name: 'POST',

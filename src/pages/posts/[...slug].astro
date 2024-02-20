@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import PostLayout from "../../layouts/PostLayout.astro";
+import { MDCONFIG } from "@/config";
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection("posts");
@@ -11,9 +12,39 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 ---
 
 <PostLayout frontmatter={entry.data}>
+    <div
+        slot="toc"
+        class="fixed ml-6 top-[15%] h-1/2 scroll-smooth flex flex-col overflow-y-scroll overflow-x-visible text-foreground/30 will-change-scroll"
+    >
+        {
+            headings
+                // .filter((e) => (e.depth >= MDCONFIG.max && e.depth <= MDCONFIG.min))
+                .map((e) => (
+                    <div
+                        onclick={"scrollToSection('" + e.slug + "')"}
+                        class="hover:border-l-ring border-background border-2 px-2 text-sm origin-left hover:text-foreground hover:scale-105 transition delay-0 ease-in-out"
+                        style={{ paddingLeft: e.depth * 10 + "px" }}
+                    >
+                        {e.text}
+                    </div>
+                ))
+        }
+    </div>
     <Content />
 </PostLayout>
+
+<script is:inline>
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var sectionTop =
+            section.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({
+            top: sectionTop,
+            behavior: "smooth",
+        });
+    }
+</script>

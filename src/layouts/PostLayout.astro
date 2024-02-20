@@ -1,14 +1,15 @@
 ---
 import RootLayout from "./RootLayout.astro";
 import { Badge } from "@/components/ui/badge";
-import { SITE } from "@/config";
-import { ArrowRight, Tag } from "lucide-react";
+import { MDCONFIG, SITE } from "@/config";
+import { ArrowRight, Tag, ChevronRight } from "lucide-react";
 const { frontmatter } = Astro.props;
 ---
 
 <RootLayout title="{frontmatter.title}">
     <div class="w-1/4"></div>
-    <div class="w-1/2 flex-1 flex flex-col shadow-xl">
+    <div class="w-1/2 flex-1 flex flex-col shadow-xl shadow-foreground/10">
+        <p id="top-title"></p>
         <div class="w-full py-10 px-8 flex flex-col items-start shadow-sm">
             <div class="text-5xl font-bold">
                 {frontmatter.title}
@@ -61,17 +62,35 @@ const { frontmatter } = Astro.props;
         </div>
     </div>
     <div class="w-1/4 flex">
-        <div class="fixed mx-8 bottom-10 flex origin-left -rotate-90">
-            <a href="" class="select-none text-lg"
-                ><ArrowRight
-                    className="stroke-ring scale-125 hover:scale-150 transition delay-0 ease-in-out"
-                /></a
-            >
+        {MDCONFIG.show && <slot name="toc" />}
 
-            <a href={"mailto:" + SITE.mail} class="select-none text-lg px-2"
-                >{SITE.mail}</a
-            >
-            <!-- <p class="select-none text-lg px-2">{SITE.mail}</p> -->
-        </div>
+        {
+            (
+                <div
+                    onclick={"scrollToSection('top-title')"}
+                    class="fixed mx-8 bottom-10 flex origin-left -rotate-90"
+                >
+                    <ArrowRight className="stroke-ring scale-125 hover:scale-150 transition delay-0 ease-in-out" />
+                    <a
+                        href={"mailto:" + SITE.mail}
+                        class="select-none text-lg px-2"
+                    >
+                        {SITE.mail}
+                    </a>
+                </div>
+            )
+        }
     </div>
 </RootLayout>
+
+<script is:inline>
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var sectionTop =
+            section.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({
+            top: sectionTop,
+            behavior: "smooth",
+        });
+    }
+</script>
