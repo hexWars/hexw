@@ -4,6 +4,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleItem from "@/components/ArticleItem.astro";
 const allPosts = await getCollection("posts");
 const title = "POST";
+var thisYear: number = 0;
 ---
 
 <BaseLayout title={title}>
@@ -15,7 +16,20 @@ const title = "POST";
                     (a, b) =>
                         b.data.pubDate.getTime() - a.data.pubDate.getTime(),
                 )
-                .map((post) => <ArticleItem post={post} />)
+                .map((post) => {
+                    if (post.data.pubDate.getFullYear() != thisYear) {
+                        thisYear = post.data.pubDate.getFullYear();
+                        return (
+                            <>
+                                <li class="px-2 my-3 font-semibold border-4 border-background border-l-ring/90">
+                                    {thisYear}
+                                </li>
+                                <ArticleItem post={post} />
+                            </>
+                        );
+                    }
+                    return <ArticleItem post={post} />;
+                })
         }
     </ul>
 </BaseLayout>
