@@ -23,4 +23,5 @@ export type NavMenu = {
     id: string;
     name: string;
     url: string;
+    next?: NavMenu[];
 }
