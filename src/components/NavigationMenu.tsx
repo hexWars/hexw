@@ -41,7 +41,7 @@ export function Navigation() {
                                     {
                                         item.next && <ul className={`absolute ${activeMenu == item.id ? 'block' : 'hidden'} mt-[9%] shadow-md py-1 rounded-xl text-nowrap`}>{item.next
                                             .sort((a: any, b: any) => (a.id - b.id))
-                                            .map((subItem) => (<li>
+                                            .map((subItem) => (<li key={subItem.id}>
                                                 <a href={subItem.url} className="block px-4 mx-1 py-2 bg-background hover:bg-border rounded-md text-center">{subItem.name}</a>
                                             </li>))}</ul>
                                     }
