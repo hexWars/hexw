@@ -1,0 +1,45 @@
+---
+import RootLayout from "@/layouts/RootLayout.astro";
+const title = "404";
+---
+
+<RootLayout title="Welcome to Astro.">
+    <div class="h-full flex justify-center items-center z-10 select-none">
+        <div class=""></div>
+
+        <!-- title -->
+        <div
+            class="text-foreground text-7xl grid title-wrapper mb-[2.7%] w-screen h-full items-center justify-center"
+        >
+            <div class="title-top ml-1 italic bg-foreground">
+                {title}
+            </div>
+            <div class="title-bottom italic bg-ring" aria-hidden="true">
+                {title}
+            </div>
+        </div>
+        <!-- long line -->
+        <div
+            class="absolute left-0 right-0 top-[50%] transform -translate-y-1/2 h-[0.3rem] bg-gradient-to-r from-foreground via-transparent to-ring"
+        >
+        </div>
+    </div>
+</RootLayout>
+
+<style>
+    .title-wrapper > div {
+        grid-area: 1/1/-1/-1;
+    }
+    .title-top {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    }
+    .title-bottom {
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
