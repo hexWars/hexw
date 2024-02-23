@@ -1,21 +1,31 @@
 ---
 const { tag, url, num } = Astro.props;
+function getFontSize(): string {
+    const sizes: string[] = ["text-s", "text-m", "text-l"];
+    return sizes[Math.floor(Math.random() * sizes.length)];
+}
 ---
 
 <div
-    class="text-lg font-semibold transition ease-in-out duration-300 hover:scale-125"
+    class="text-lg font-semibold transition ease-in-out duration-300 hover:scale-125 place-self-center"
 >
-    <!-- <a href={url} class="relative px-3 mx-5">
-        <span class="absolute text-ring right-0 top-0">1</span>
-        <span class="truncate ...">{tag}</span>
-    </a> -->
-    <a href={url} class="grid" title={tag}>
-        <span
-            class="col-start-1 row-start-1 justify-self-end w-[100%] truncate ..."
-            >{tag}</span
-        >
-        <span class="col-start-2 row-start-1 justify-self-end text-ring mr-5"
+    <a href={url} class="flex" title={tag}>
+        {
+            (
+                <span
+                    class={
+                        getFontSize() +
+                        " col-start-1 row-start-1 w-[100%] truncate ..."
+                    }
+                >
+                    {tag}
+                </span>
+            )
+        }
+        <!-- <span
+            class={getFontSize() +
+                " col-start-2 row-start-1 justify-self-end text-ring mr-5"}
             >{num}</span
-        >
+        > -->
     </a>
 </div>
