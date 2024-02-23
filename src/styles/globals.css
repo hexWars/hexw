@@ -95,6 +95,13 @@ body {
   overflow-y: scroll;
 }
 
+#toc {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .giscus {
   margin-left: auto;
   margin-right: auto;
