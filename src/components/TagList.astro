@@ -1,0 +1,18 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { Tag } from "lucide-react";
+const { frontmatter } = Astro.props;
+---
+
+<div class="mx-8 my-6 text-base text-ring font-normal flex">
+    <Tag className="h-5 w-5 mx-2" />
+    <div>
+        {
+            frontmatter.tags.map((tag: string) => (
+                <Badge variant="secondary" className="hover:bg-ring/10 mx-1">
+                    <a href={"/tag/" + tag}>{tag}</a>
+                </Badge>
+            ))
+        }
+    </div>
+</div>

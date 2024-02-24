@@ -1,8 +1,8 @@
 ---
 import RootLayout from "./RootLayout.astro";
-import { Badge } from "@/components/ui/badge";
 import { MDCONFIG, SITE } from "@/config";
-import { ArrowRight, Tag, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import TagList from "@/components/TagList.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -45,21 +45,7 @@ const { frontmatter } = Astro.props;
             </article>
         </div>
         <hr />
-        <div class="mx-8 my-6 text-base text-ring font-normal flex">
-            <Tag className="h-5 w-5 mx-2" />
-            <div>
-                {
-                    frontmatter.tags.map((tag: string) => (
-                        <Badge
-                            variant="secondary"
-                            className="hover:bg-ring/70 mx-1"
-                        >
-                            {tag}
-                        </Badge>
-                    ))
-                }
-            </div>
-        </div>
+        <TagList frontmatter={frontmatter} />
     </div>
     <div class="w-1/4 flex">
         {MDCONFIG.show && <slot name="toc" />}
@@ -94,3 +80,9 @@ const { frontmatter } = Astro.props;
         });
     }
 </script>
+
+<script
+    is:inline
+    defer
+    src="https://us.umami.is/script.js"
+    data-website-id="6b21107c-0c35-4fb2-9250-fca1683ee8b3"></script>
