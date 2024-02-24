@@ -102,12 +102,6 @@ body {
   /* Firefox */
 }
 
-.giscus {
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-}
-
 ::selection {
   color: rgba(255, 255, 255, 0.932);
   background: rgba(78, 78, 78, 0.932);
