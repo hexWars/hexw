@@ -7,6 +7,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
+import Moving from "@/components/Moving.astro";
 import { Navigation } from "@/components/NavigationMenu";
 import "@/styles/globals.css";
 import { Rss } from "lucide-react";
@@ -24,6 +25,7 @@ import { Rss } from "lucide-react";
 		<title>{title}</title>
 	</head>
 	<body class="">
+		<Moving client:load />
 		<div class="flex flex-col h-screen">
 			<div
 				class="py-3 px-96 fixed top-0 z-0 max-h-[7%] w-full shadow-sm flex justify-between backdrop-blur"
