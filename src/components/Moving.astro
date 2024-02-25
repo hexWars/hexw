@@ -7,10 +7,18 @@
     class="w-44 h-44 pointer-events-none rounded-full bg-ring/50 z-100 blur-3xl fixed"
 >
 </div>
+<!-- <div
+    id="movingCircle"
+    class="w-10 h-10 pointer-events-none rounded-full border-2 border-ring z-100 fixed"
+>
+</div> -->
 
 <style is:global>
     #movingCircle {
-        transition: opacity 1s ease; /* 添加透明度过渡效果 */
+        transition:
+            left 0s,
+            top 0s,
+            opacity 1s ease;
         opacity: 0;
     }
 </style>
@@ -41,8 +49,19 @@
         });
 
         // 监听鼠标移入事件
-        document.addEventListener("mouseenter", () => {
+        document.addEventListener("mouseenter", (event) => {
             movingCircle.style.opacity = 1; // 鼠标移入时将透明度设为1
+            // 获取鼠标当前位置
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // 计算圆形中心位置
+            const circleX = mouseX - 88;
+            const circleY = mouseY - 88;
+
+            // 将圆形元素移动到鼠标位置
+            movingCircle.style.left = circleX + "px";
+            movingCircle.style.top = circleY + "px";
         });
     });
 </script>
