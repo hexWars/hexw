@@ -1,16 +1,18 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
-
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
-  integrations: [react(), tailwind(
-    {
-      applyBaseStyles: false,
-    }
-  )],
+  site: "https://hexw.zeabur.app",
+  integrations: [
+    react(),
+    tailwind(
+      { applyBaseStyles: false, }
+    ),
+    sitemap(),
+  ],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
@@ -19,8 +21,7 @@ export default defineConfig({
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
       // Plugins
-      remarkPlugins: [],
-
-    },
-  },
+      remarkPlugins: []
+    }
+  }
 });
