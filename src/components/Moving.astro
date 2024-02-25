@@ -16,31 +16,33 @@
 </style>
 
 <script is:inline>
-    // 获取需要移动的圆形元素
-    const movingCircle = document.getElementById("movingCircle");
+    document.addEventListener("astro:page-load", () => {
+        // 获取需要移动的圆形元素
+        const movingCircle = document.getElementById("movingCircle");
 
-    // 监听鼠标移动事件
-    document.addEventListener("mousemove", (event) => {
-        // 获取鼠标当前位置
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
+        // 监听鼠标移动事件
+        document.addEventListener("mousemove", (event) => {
+            // 获取鼠标当前位置
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
 
-        // 计算圆形中心位置
-        const circleX = mouseX - 88;
-        const circleY = mouseY - 88;
+            // 计算圆形中心位置
+            const circleX = mouseX - 88;
+            const circleY = mouseY - 88;
 
-        // 将圆形元素移动到鼠标位置
-        movingCircle.style.left = circleX + "px";
-        movingCircle.style.top = circleY + "px";
-    });
+            // 将圆形元素移动到鼠标位置
+            movingCircle.style.left = circleX + "px";
+            movingCircle.style.top = circleY + "px";
+        });
 
-    // 监听鼠标移出事件
-    document.addEventListener("mouseleave", () => {
-        movingCircle.style.opacity = 0; // 鼠标移出时将透明度设为0
-    });
+        // 监听鼠标移出事件
+        document.addEventListener("mouseleave", () => {
+            movingCircle.style.opacity = 0; // 鼠标移出时将透明度设为0
+        });
 
-    // 监听鼠标移入事件
-    document.addEventListener("mouseenter", () => {
-        movingCircle.style.opacity = 1; // 鼠标移入时将透明度设为1
+        // 监听鼠标移入事件
+        document.addEventListener("mouseenter", () => {
+            movingCircle.style.opacity = 1; // 鼠标移入时将透明度设为1
+        });
     });
 </script>
