@@ -1,10 +1,8 @@
-[English](./README.md) | [中文](./README-zh.md)
-
 # Astro Theme: HEXW
 
 > Welcome to give me suggestions.
 
-![pin](./assets/pin.png)
+![purple](./assets/purple.png)
 
 HEXW is an Astro theme based on Shadcn, TailwindCSS, and React. It allows for easy construction of blog websites.
 
@@ -14,13 +12,13 @@ HEXW is an Astro theme based on Shadcn, TailwindCSS, and React. It allows for ea
 - [X] rss
 - [X] global config
 - [X] dark mode
+- [X] socials
 
 TODO:
 
 - [ ] search
 - [ ] responsive page
 - [ ] sitemap
-- [ ] socials
 - [ ] SEO
 - [ ] pagination
 - [ ] timeline
@@ -51,11 +49,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 💻 Preview
 
-![light](./assets/light.png)
-![dark](./assets/dark.png)
-![plus](./assets/plus.png)
-![purple](./assets/purple-dark.png)
-![red](./assets/red-dark.png)
-![purple-light](./assets/purple-light.png)
-![purple-dragon](./assets/purple-dragon.png)
-![purple-leaf](./assets/leaf.png)
+[demo](https://hexw.zeabur.app/)
