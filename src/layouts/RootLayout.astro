@@ -40,7 +40,7 @@ import "@/styles/globals.css";
 					</a> -->
 				</div>
 
-				<Navigation client:idle />
+				<Navigation client:idle transition:persist />
 			</div>
 			<div class="mt-[5%] flex flex-1">
 				<!-- <div class="h-screen mt-16"> -->
@@ -52,7 +52,9 @@ import "@/styles/globals.css";
 		</div>
 		<style></style>
 
-		<script is:inline>
+		<script>
+			import { isDark } from "@/store.ts";
+			// 从localstorage|系统获取主题
 			const getThemePreference = () => {
 				if (
 					typeof localStorage !== "undefined" &&
@@ -64,11 +66,13 @@ import "@/styles/globals.css";
 					? "dark"
 					: "light";
 			};
-			const isDark = getThemePreference() === "dark";
-			document.documentElement.classList[isDark ? "add" : "remove"](
+			// 是dark模式就在dom中添加dark
+			isDark.set(getThemePreference() === "dark");
+			console.log("isDark1:" + isDark.get());
+			document.documentElement.classList[isDark.get() ? "add" : "remove"](
 				"dark",
 			);
-
+			// localStorage存在就添加observer，当class变化时触发回调
 			if (typeof localStorage !== "undefined") {
 				const observer = new MutationObserver(() => {
 					const isDark =
@@ -80,6 +84,32 @@ import "@/styles/globals.css";
 					attributeFilter: ["class"],
 				});
 			}
+		</script>
+		<script>
+			import { isDark } from "@/store.ts";
+			document.addEventListener("astro:before-swap", () => {
+				// 从localstorage|系统获取主题
+				const getThemePreference = () => {
+					if (
+						typeof localStorage !== "undefined" &&
+						localStorage.getItem("theme")
+					) {
+						return localStorage.getItem("theme");
+					}
+					return window.matchMedia("(prefers-color-scheme: dark)")
+						.matches
+						? "dark"
+						: "light";
+				};
+				// 是dark模式就在dom中添加dark
+				isDark.set(getThemePreference() === "dark");
+				console.log("isDark:" + isDark.get());
+			});
+			document.addEventListener("astro:after-swap", () => {
+				document.documentElement.classList[
+					isDark.get() ? "add" : "remove"
+				]("dark");
+			});
 		</script>
 	</body>
 </html>
