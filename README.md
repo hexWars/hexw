@@ -26,9 +26,13 @@ TODO:
   
 ## 🚀 Start
 
-You can 'clone' this product.
+You can 'clone' this product and install dependencies.
 
-```nodejs
+```shell
+git clone https://github.com/hexWars/hexw.git
+
+cd hexw
+
 npm install
 ```
 
