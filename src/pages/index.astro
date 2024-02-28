@@ -2,13 +2,14 @@
 import RootLayout from "@/layouts/RootLayout.astro";
 import SocialIcons from "@/components/SocialIcons.astro";
 import Moving from "@/components/Moving.astro";
+import { SITE } from "@/config";
 const title = "AstroTheme";
 const description = "I put all my romanticism".toUpperCase();
 const author = "hexWars";
 const time = "2020 - 2024";
 ---
 
-<RootLayout title="Welcome to Astro.">
+<RootLayout title={SITE.title}>
 	<Moving />
 	<div class="h-full flex justify-center items-center z-10 select-none">
 		<div

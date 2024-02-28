@@ -1,9 +1,10 @@
 ---
 import RootLayout from "@/layouts/RootLayout.astro";
+import { SITE } from "@/config";
 const title = "404";
 ---
 
-<RootLayout title="Welcome to Astro.">
+<RootLayout title={SITE.title}>
     <div class="h-full flex justify-center items-center z-10 select-none">
         <div class=""></div>
 
