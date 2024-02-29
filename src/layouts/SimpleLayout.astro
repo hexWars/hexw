@@ -1,0 +1,80 @@
+---
+import RootLayout from "./RootLayout.astro";
+import { MDCONFIG, SITE } from "@/config";
+import { ArrowRight } from "lucide-react";
+const { frontmatter } = Astro.props;
+---
+
+<RootLayout title="{frontmatter.title}">
+    <div class="w-1/4"></div>
+    <div class="w-1/2 flex-1 flex flex-col shadow-xl shadow-foreground/10">
+        <p id="top"></p>
+        <div class="w-full py-10 px-8 flex flex-col items-start shadow-sm">
+            <div class="text-5xl font-bold">
+                {frontmatter.title}
+            </div>
+            <div class="my-3 text-base flex font-normal">
+                <div class="">
+                    {
+                        frontmatter.pubDate.toString().slice(0, 4) +
+                            "-" +
+                            frontmatter.pubDate.toString().slice(5, 7) +
+                            "-" +
+                            frontmatter.pubDate.toString().slice(8, 10)
+                    }
+                </div>
+                <div class="px-1">·</div>
+                <div>
+                    {SITE.author}
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <article
+                class="mx-8 my-5 dark:prose-invert
+            prose-base prose max-w-none break-words
+            prose-a:text-ring
+            prose-strong:text-ring
+            marker:text-ring
+            prose-blockquote:bg-ring/5
+            prose-headings:underline prose-headings:decoration-ring
+            hover:prose-tr:bg-ring/20"
+            >
+                <slot />
+            </article>
+        </div>
+        <hr />
+    </div>
+    <div class="w-1/4 flex">
+        {MDCONFIG.show && <slot name="toc" />}
+
+        {
+            (
+                <div
+                    onclick={"scrollToSection('top')"}
+                    class="fixed mx-8 bottom-10 flex origin-left -rotate-90"
+                >
+                    <ArrowRight className="stroke-ring scale-125 hover:scale-150 transition delay-0 ease-in-out" />
+                    <a
+                        href={"mailto:" + SITE.mail}
+                        class="select-none text-lg px-2"
+                    >
+                        {SITE.mail}
+                    </a>
+                </div>
+            )
+        }
+    </div>
+</RootLayout>
+
+<script is:inline>
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var sectionTop =
+            section.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({
+            top: sectionTop,
+            behavior: "smooth",
+        });
+    }
+</script>

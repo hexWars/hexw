@@ -53,7 +53,7 @@ export const NAVMENU: NavMenu[] = [
     {
         id: '4',
         name: 'ABOUT',
-        url: '/posts/about/',
+        url: '/about/',
     },
 ]
 
