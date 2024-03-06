@@ -26,15 +26,19 @@ export function Navigation() {
                             (a, b) =>
                                 parseInt(a.id) - parseInt(b.id),
                         )
-                        .map((item) =>
-                            <NavigationMenuItem key={item.id}>
-                                <div className="text-base subpixel-antialiased font-medium">
-                                    <a href={item.url} className='px-2 py-2 hover:text-ring' data-astro-prefetch="viewport">
-                                        {item.name}
-                                    </a>
-                                </div>
-                            </NavigationMenuItem>
-                        )
+                        .map((item) => {
+                            const prefetchProps = item.prefetch ? { 'data-astro-prefetch': 'viewport' } : {};
+
+                            return (
+                                <NavigationMenuItem key={item.id}>
+                                    <div className="text-base subpixel-antialiased font-medium">
+                                        <a href={item.url} className={`px-2 py-2 hover:text-ring`} {...prefetchProps}>
+                                            {item.name}
+                                        </a>
+                                    </div>
+                                </NavigationMenuItem>
+                            );
+                        })
                 }
 
                 {

@@ -23,5 +23,6 @@ export type NavMenu = {
     id: string;
     name: string;
     url: string;
+    prefetch?: boolean;
     next?: NavMenu[];
 }

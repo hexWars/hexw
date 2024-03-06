@@ -54,6 +54,7 @@ export const NAVMENU: NavMenu[] = [
         id: '4',
         name: 'ABOUT',
         url: '/about/',
+        prefetch: true,
     },
 ]
 
