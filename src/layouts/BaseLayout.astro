@@ -3,7 +3,7 @@ import RootLayout from "./RootLayout.astro";
 const { frontmatter, title } = Astro.props;
 ---
 
-<RootLayout title="{frontmatter.title}">
+<RootLayout title={title}>
     <div class="w-full flex flex-1 justify-center">
         <div class="w-1/2 flex flex-col mb-32 shadow-xl shadow-foreground/10">
             <div
