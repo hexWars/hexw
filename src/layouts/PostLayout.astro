@@ -6,7 +6,7 @@ import TagList from "@/components/TagList.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<RootLayout title="{frontmatter.title}">
+<RootLayout title={frontmatter.title}>
     <div class="w-1/4"></div>
     <div class="w-1/2 flex-1 flex flex-col shadow-xl shadow-foreground/10">
         <p id="top"></p>
