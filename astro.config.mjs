@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import rehypeExternalLinks from 'rehype-external-links';
 
 import mdx from "@astrojs/mdx";
 
@@ -20,6 +21,14 @@ export default defineConfig({
       wrap: true,
       // Plugins
       remarkPlugins: []
-    }
+    },
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          content: { type: 'text', value: '🔗' }
+        }
+      ],
+    ]
   }
 });
