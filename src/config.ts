@@ -31,19 +31,6 @@ export const NAVMENU: NavMenu[] = [
         id: '2',
         name: 'CATEGORY',
         url: '/categories/',
-        next: [
-
-            {
-                id: '1',
-                name: 'fdsaf',
-                url: '/category/fdsaf',
-            },
-            {
-                id: '2',
-                name: '434',
-                url: '/category/434',
-            },
-        ]
     },
     {
         id: '3',
@@ -52,6 +39,11 @@ export const NAVMENU: NavMenu[] = [
     },
     {
         id: '4',
+        name: 'FRIEND',
+        url: '/friends/',
+    },
+    {
+        id: '5',
         name: 'ABOUT',
         url: '/about/',
         prefetch: true,

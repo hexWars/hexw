@@ -1,0 +1,64 @@
+---
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const title = "FRIEND";
+const friends = [
+    {
+        name: "Blog1",
+        url: "https://www.google.com/",
+        description: "Blog1 description",
+    },
+    {
+        name: "Blog2",
+        url: "https://www.google.com/",
+        description: "Blog2 description",
+    },
+    {
+        name: "Blog3",
+        url: "https://www.google.com/",
+        description: "Blog3 description",
+    },
+    {
+        name: "Blog4",
+        url: "https://www.google.com/",
+        description: "Blog4 description",
+    },
+    {
+        name: "Blog5",
+        url: "https://www.google.com/",
+        description: "Blog5 description",
+    },
+    {
+        name: "Blog6",
+        url: "https://www.google.com/",
+        description: "Blog6 description",
+    },
+];
+---
+
+<BaseLayout title={title}>
+    <div
+        class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3"
+    >
+        {
+            friends.map((e) => (
+                <a href={e.url} title={e.name + " - " + e.description}>
+                    <Card className="hover:invert hover:text-ring transition duration-150 ease-in-out">
+                        <CardHeader className="p-3">
+                            <CardTitle className="text-base truncate ...">
+                                {e.name}
+                            </CardTitle>
+                        </CardHeader>
+                    </Card>
+                </a>
+            ))
+        }
+    </div>
+</BaseLayout>
