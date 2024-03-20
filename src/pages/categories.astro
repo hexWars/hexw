@@ -18,7 +18,9 @@ allPosts.forEach((post) => {
 ---
 
 <BaseLayout title={title}>
-    <div class="grid grid-cols-6 gap-x-2 gap-y-1">
+    <div
+        class="grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-x-2 gap-y-1"
+    >
         {
             uniqueCategorys.map((item) => (
                 <TagItem
