@@ -8,6 +8,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Comments from "@/components/Comments.astro";
 const title = "FRIEND";
 const friends = [
     {
@@ -60,5 +61,8 @@ const friends = [
                 </a>
             ))
         }
+    </div>
+    <div class="mt-20 w-full">
+        <Comments />
     </div>
 </BaseLayout>

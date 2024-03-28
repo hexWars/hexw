@@ -2,6 +2,7 @@
 import RootLayout from "./RootLayout.astro";
 import { MDCONFIG, SITE } from "@/config";
 import { ArrowRight } from "lucide-react";
+import Comments from "@/components/Comments.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -44,6 +45,7 @@ const { frontmatter } = Astro.props;
             </article>
         </div>
         <hr />
+        <Comments />
     </div>
     <div class="w-1/4 flex">
         {MDCONFIG.show && <slot name="toc" />}
