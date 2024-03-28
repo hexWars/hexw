@@ -1,0 +1,21 @@
+---
+const { post } = Astro.props;
+
+const pubDate = post.data.pubDate;
+const year = pubDate.getFullYear().toString();
+const month = ("0" + (pubDate.getMonth() + 1)).slice(-2);
+const date = ("0" + pubDate.getDate()).slice(-2);
+const time = year + "-" + month + "-" + date;
+---
+
+<a
+    href={`/posts/${post.slug}/`}
+    class="justify-left rounded-lg py-1 flex text-ellipsis gap-1 font-semibold text-base"
+>
+    <div class="text-nowrap text-foreground/80">
+        [{time}]
+    </div>
+    <div class="text-ring">{post.data.title}</div>
+
+    <!-- <div class="hover:text-ring">{post.data.title}</div> -->
+</a>

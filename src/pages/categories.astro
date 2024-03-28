@@ -1,12 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import TagItem from "../components/TagItem.astro";
+import SubTitle from "@/components/SubTitle.astro";
+import TagItem from "@/components/TagItem.astro";
+import CategoryItem from "@/components/CategoryItem.astro";
 const allPosts = await getCollection("posts");
 const title = "CATEGORY";
+// 分类的数组uniqueCategorys
+// 我需要一个算法，用来统计两列，所以需要左边的leftMapList和leftNum，然后指针遍历，往小的里面填数据（这个leftMapList，是map，value是list
+// 我怎么获得长度？需要一个结构用来存储各个Category的长度，所以我需要一个map，key是category，value是长度，这就是categoryMap
+
+// --- category array
 const uniqueCategorys: string[] = [
     ...new Set(allPosts.map((post) => post.data.categories).flat()),
 ] as string[];
+// --- category map cnt
 const categoryMap: Map<string, number> = new Map();
 allPosts.forEach((post) => {
     post.data.categories.forEach((category) => {
@@ -15,11 +23,74 @@ allPosts.forEach((post) => {
             : categoryMap.set(category, 1);
     });
 });
+// --- articles
+let leftNum = 0,
+    rightNum = 0;
+let leftMapList: Map<string, Array<any>> = new Map(),
+    rightMapList: Map<string, Array<any>> = new Map();
+
+let categoryArticleMap: Map<string, Array<any>> = new Map();
+allPosts.forEach((post) => {
+    for (let i = 0; i < post.data.categories.length; i++) {
+        let category = post.data.categories[i];
+        if (categoryArticleMap.has(category)) {
+            categoryArticleMap.get(category)!.push(post);
+        } else {
+            let arr: any[] = [post]; // 创建一个包含当前文章的新数组
+            categoryArticleMap.set(category, arr);
+        }
+    }
+});
+
+// 将分类按照文章数量从多到少排序
+const sortedCategories = Array.from(categoryArticleMap.entries()).sort(
+    ([catA, articlesA], [catB, articlesB]) =>
+        articlesB.length - articlesA.length,
+);
+
+// 先将文章数量最多的分类放入较少的一边
+let currentNum = 0;
+const maxArticlesCategory = sortedCategories.shift();
+if (maxArticlesCategory) {
+    const [maxCat, maxArticles] = maxArticlesCategory;
+    if (leftNum <= rightNum) {
+        leftMapList.set(maxCat, maxArticles);
+        leftNum += maxArticles.length;
+    } else {
+        rightMapList.set(maxCat, maxArticles);
+        rightNum += maxArticles.length;
+    }
+    currentNum = maxArticles.length;
+}
+
+// 将其他分类文章按照数量平均分配到 leftMapList 和 rightMapList 中
+sortedCategories.forEach(([category, articles]) => {
+    if (leftNum <= rightNum) {
+        leftMapList.set(category, articles);
+        leftNum += articles.length;
+    } else {
+        rightMapList.set(category, articles);
+        rightNum += articles.length;
+    }
+    currentNum += articles.length;
+});
+
+// 如果还有未分配完的分类文章，将其放入文章数量较少的一边
+while (sortedCategories.length > 0) {
+    const [category, articles] = sortedCategories.pop()!;
+    if (leftNum <= rightNum) {
+        leftMapList.set(category, articles);
+        leftNum += articles.length;
+    } else {
+        rightMapList.set(category, articles);
+        rightNum += articles.length;
+    }
+}
 ---
 
 <BaseLayout title={title}>
     <div
-        class="grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-x-2 gap-y-1"
+        class="grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-x-2 gap-y-1 mb-10"
     >
         {
             uniqueCategorys.map((item) => (
@@ -30,5 +101,46 @@ allPosts.forEach((post) => {
                 />
             ))
         }
+    </div>
+
+    <!-- <hr class="mt-14" /> -->
+
+    <div class="flex xl:flex-row flex-col w-full gap-10">
+        <div class="xl:w-1/2 w-full flex flex-col">
+            {
+                Array.from(leftMapList.keys()).map((key) => {
+                    let arr: any[] = leftMapList.get(key)!;
+
+                    return (
+                        <>
+                            <SubTitle text={key} />
+                            {arr.map((item: any) => {
+                                return (
+                                    <CategoryItem key={item.id} post={item} />
+                                );
+                            })}
+                        </>
+                    );
+                })
+            }
+        </div>
+        <div class="xl:w-1/2 w-full flex flex-col">
+            {
+                Array.from(rightMapList.keys()).map((key) => {
+                    let arr: any[] = rightMapList.get(key)!;
+
+                    return (
+                        <>
+                            <SubTitle text={key} />
+                            {arr.map((item: any) => {
+                                return (
+                                    <CategoryItem key={item.id} post={item} />
+                                );
+                            })}
+                        </>
+                    );
+                })
+            }
+        </div>
     </div>
 </BaseLayout>
